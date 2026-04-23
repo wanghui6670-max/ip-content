@@ -1,0 +1,13 @@
+# Default owner
+* @wanghui6670-max
+
+# App
+/apps/web-dashboard/ @wanghui6670-max
+
+# Data and docs
+/data/ @wanghui6670-max
+/docs/ @wanghui6670-max
+
+# Packages and tools
+/packages/ @wanghui6670-max
+/tools/ @wanghui6670-max
