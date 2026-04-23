@@ -56,6 +56,10 @@ jobs:
             npm install
           fi
 
+      - name: Run web-dashboard tests
+        working-directory: apps/web-dashboard
+        run: npm test
+
       - name: Build web app
         run: npm run build:web
 
