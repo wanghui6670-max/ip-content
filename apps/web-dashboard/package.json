@@ -8,7 +8,8 @@
     "dev": "npm run export:data && vite",
     "build": "vite build",
     "build:all": "npm run export:data && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test ./test/*.test.js"
   },
   "devDependencies": {
     "vite": "^7.1.10"
