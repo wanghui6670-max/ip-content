@@ -1,0 +1,71 @@
+{
+  "base_name": "IP内容中台",
+  "version": "1.0",
+  "tables": [
+    {
+      "name": "素材采集",
+      "fields": [
+        { "name": "素材标题", "type": "text", "required": true },
+        { "name": "内容线", "type": "single_select", "required": true, "options": ["主号-AI", "主号-经营", "主号-成长", "品牌号-瑜伽", "品牌号-轻食"] },
+        { "name": "账号", "type": "single_select", "required": true, "options": ["主号", "品牌号"] },
+        { "name": "来源链接", "type": "text", "required": false },
+        { "name": "素材类型", "type": "single_select", "required": true, "options": ["观点", "案例", "故事", "证据", "规范", "SOP"] },
+        { "name": "适配平台", "type": "multi_select", "required": true, "options": ["朋友圈", "视频号", "小红书", "抖音", "公众号"] },
+        { "name": "内容目标", "type": "multi_select", "required": true, "options": ["引流", "建信任", "促转化", "复购"] },
+        { "name": "可转化方向", "type": "text", "required": true },
+        { "name": "可复用状态", "type": "single_select", "required": true, "options": ["待整理", "已分类", "已拆解", "已内化", "已使用", "已复盘", "可复用"] }
+      ]
+    },
+    {
+      "name": "选题池",
+      "fields": [
+        { "name": "选题一句话", "type": "text", "required": true },
+        { "name": "内容线", "type": "single_select", "required": true, "options": ["主号-AI", "主号-经营", "主号-成长", "品牌号-瑜伽", "品牌号-轻食"] },
+        { "name": "账号", "type": "single_select", "required": true, "options": ["主号", "品牌号"] },
+        { "name": "目标用户", "type": "text", "required": true },
+        { "name": "核心观点", "type": "long_text", "required": true },
+        { "name": "素材来源链接", "type": "text", "required": true },
+        { "name": "适配平台", "type": "multi_select", "required": true, "options": ["朋友圈", "视频号", "小红书", "抖音", "公众号"] },
+        { "name": "转化动作", "type": "text", "required": true },
+        { "name": "状态", "type": "single_select", "required": true, "options": ["待挑选", "进行中", "待排期", "已转任务", "已发布", "已复盘", "淘汰"] }
+      ]
+    },
+    {
+      "name": "内容任务",
+      "fields": [
+        { "name": "内容标题", "type": "text", "required": true },
+        { "name": "所属选题", "type": "text", "required": true },
+        { "name": "素材来源", "type": "text", "required": true },
+        { "name": "目标平台", "type": "multi_select", "required": true, "options": ["朋友圈", "视频号", "小红书", "抖音", "公众号"] },
+        { "name": "负责人", "type": "text", "required": true },
+        { "name": "计划发布时间", "type": "date", "required": false },
+        { "name": "当前状态", "type": "single_select", "required": true, "options": ["待分配", "待生产", "待审核", "待修改", "待发布", "已发布", "已复盘"] },
+        { "name": "发布链接", "type": "url", "required": false }
+      ]
+    },
+    {
+      "name": "发布回执",
+      "fields": [
+        { "name": "内容标题", "type": "text", "required": true },
+        { "name": "平台", "type": "single_select", "required": true, "options": ["朋友圈", "视频号", "小红书", "抖音", "公众号"] },
+        { "name": "发布链接", "type": "url", "required": false },
+        { "name": "24h数据", "type": "long_text", "required": false },
+        { "name": "72h数据", "type": "long_text", "required": false },
+        { "name": "7d数据", "type": "long_text", "required": false },
+        { "name": "结论", "type": "single_select", "required": false, "options": ["放大", "改写", "转私域", "淘汰"] }
+      ]
+    },
+    {
+      "name": "周复盘",
+      "fields": [
+        { "name": "周次", "type": "text", "required": true },
+        { "name": "AI母题", "type": "text", "required": true },
+        { "name": "品牌案例", "type": "text", "required": true },
+        { "name": "表现最佳内容", "type": "text", "required": false },
+        { "name": "问题内容", "type": "text", "required": false },
+        { "name": "复盘结论", "type": "long_text", "required": true },
+        { "name": "下周动作", "type": "long_text", "required": true }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "ssot": "feishu_online",
+  "base_name": "IP内容中台",
+  "app_token": "<replace-with-your-feishu-app-token>",
+  "url": "<optional-private-feishu-base-url>",
+  "default_table_id": "<replace-with-default-table-id>",
+  "created_at": "2026-04-23T00:00:00",
+  "tables": {
+    "素材采集": "<table-id>",
+    "选题池": "<table-id>",
+    "内容任务": "<table-id>",
+    "发布回执": "<table-id>",
+    "周复盘": "<table-id>"
+  },
+  "schema_file": "./data/feishu-mirror/ip-content-hub-base-schema.json"
+}

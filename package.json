@@ -1,0 +1,10 @@
+{
+  "name": "ip-content",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev:web": "npm --prefix apps/web-dashboard run dev",
+    "build:web": "npm --prefix apps/web-dashboard run build:all",
+    "preview:web": "npm --prefix apps/web-dashboard run preview"
+  }
+}

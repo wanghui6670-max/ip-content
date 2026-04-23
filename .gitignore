@@ -1,0 +1,17 @@
+# Node
+node_modules/
+*.log
+
+# Build outputs
+apps/web-dashboard/dist/
+apps/web-dashboard/src/generated/dashboard-data.js
+
+# Local secrets
+.env
+.env.*
+!.env.example
+data/feishu-mirror/base-config.json
+
+# OS
+.DS_Store
+Thumbs.db

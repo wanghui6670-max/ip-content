@@ -1,0 +1,2347 @@
+{
+  "meta": {
+    "generatedAt": "2026-04-23T10:49:08",
+    "projectName": "IP Factory",
+    "projectSubtitle": "双线 IP 内容中台网页端",
+    "sync": {
+      "ssot": "飞书多维表",
+      "baseName": "IP内容中台",
+      "configured": false,
+      "tokenMasked": "",
+      "url": "",
+      "mirroredAt": "",
+      "mirrorSource": "",
+      "status": "offline"
+    },
+    "counts": {
+      "assets": 20,
+      "topics": 12,
+      "highPerf": 10,
+      "tasks": 2,
+      "receipts": 2,
+      "activeTopics": 3,
+      "reviewTopics": 6,
+      "doneTopics": 0
+    },
+    "defaultPairing": {
+      "aiTopic": "T01",
+      "brandTopic": "T07"
+    },
+    "deploy": {
+      "build": "npm run build:all",
+      "preview": "npm run preview",
+      "static": "上传 web-dashboard/dist 到任意静态托管",
+      "vercel": "vercel --prod"
+    },
+    "buildMode": "generated_fallback",
+    "sourceContext": "repo_workspace"
+  },
+  "topics": [
+    {
+      "id": "T01",
+      "title": "AI 五层结构：别再碎片化学 AI",
+      "subtitle": "想学 AI 但信息过载的老板或个体",
+      "account": "主号",
+      "line": "主号-AI",
+      "lineLabel": "AI 实战",
+      "platformText": "公众号 / 视频号 / 小红书",
+      "platforms": [
+        "公众号",
+        "视频号",
+        "小红书"
+      ],
+      "status": "进行中",
+      "statusType": "active",
+      "audience": "想学 AI 但信息过载的老板或个体",
+      "goal": "关注、私信领取框架图",
+      "coreView": "AI 不是一堆工具，而是可以分层理解和上手的系统",
+      "sourceAssetIds": [
+        "A01"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A01",
+          "title": "AI五层架构",
+          "line": "主号-AI",
+          "type": "框架观点",
+          "source": "1-Brain/raw/writing/ai-architecture/公众号文章_AI五层架构.html.md",
+          "platforms": [
+            "公众号",
+            "小红书",
+            "视频号"
+          ],
+          "platformText": "公众号 / 小红书 / 视频号",
+          "goal": "建信任",
+          "reuse": "五层图解长文、3分钟口播、朋友圈认知贴",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：AI 不是一堆工具，而是可以分层理解和上手的系统\n来源资产：A01\n转化动作：关注、私信领取框架图",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "1",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "1",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "AI 不是一堆工具，而是可以分层理解和上手的系统"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「想学 AI 但信息过载的老板或个体」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：关注、私信领取框架图。来源资产优先使用：AI五层架构。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [
+        {
+          "内容标题": "AI五层架构 3 分钟讲清楚",
+          "所属选题": "T01",
+          "素材来源": "A01",
+          "目标平台": "视频号|抖音",
+          "负责人": "王辉,协作者",
+          "计划发布时间": "2026-04-22",
+          "当前状态": "待生产",
+          "发布链接": ""
+        }
+      ],
+      "receipts": [
+        {
+          "内容标题": "AI五层架构 3 分钟讲清楚",
+          "平台": "视频号",
+          "发布链接": "",
+          "24h数据": "待回填",
+          "72h数据": "待回填",
+          "7d数据": "待回填",
+          "结论": ""
+        }
+      ],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "T",
+          "role": "Task",
+          "time": "2026-04-22",
+          "text": "AI五层架构 3 分钟讲清楚 当前状态：待生产，负责人：王辉,协作者。"
+        },
+        {
+          "badge": "R",
+          "role": "Receipt",
+          "time": "视频号",
+          "text": "发布回执已建立，当前 24h / 72h / 7d 数据仍以“待回填”为主。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "1 张资产",
+          "text": "当前母题可直接调用的核心资产：AI五层架构。"
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "title": "知识库不是收藏夹，是可复用的编译层",
+      "subtitle": "想搭知识库的内容创作者",
+      "account": "主号",
+      "line": "主号-AI",
+      "lineLabel": "AI 实战",
+      "platformText": "公众号 / 朋友圈 / 视频号",
+      "platforms": [
+        "公众号",
+        "朋友圈",
+        "视频号"
+      ],
+      "status": "待挑选",
+      "statusType": "queued",
+      "audience": "想搭知识库的内容创作者",
+      "goal": "私信“知识库”",
+      "coreView": "知识库的价值不在收藏，而在把原文编译成可复用结构",
+      "sourceAssetIds": [
+        "A02",
+        "A03"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A02",
+          "title": "Claude Code + Obsidian 知识管理实战",
+          "line": "主号-AI",
+          "type": "案例方法",
+          "source": "1-Brain/raw/writing/articles/公众号文章：Claude Code + Obsidian 实战...md",
+          "platforms": [
+            "公众号",
+            "视频号",
+            "朋友圈"
+          ],
+          "platformText": "公众号 / 视频号 / 朋友圈",
+          "goal": "建信任/引流",
+          "reuse": "方法论长文、工作流短视频、清单贴",
+          "status": "已分类"
+        },
+        {
+          "id": "A03",
+          "title": "编译式知识管理工作流",
+          "line": "主号-AI",
+          "type": "方法论",
+          "source": "1-Brain/wiki/编译式知识管理工作流（Claude Code + Obsidian）.md",
+          "platforms": [
+            "公众号",
+            "小红书"
+          ],
+          "platformText": "公众号 / 小红书",
+          "goal": "建信任",
+          "reuse": "工作流拆解、知识库演示、服务说明",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：知识库的价值不在收藏，而在把原文编译成可复用结构\n来源资产：A02 / A03\n转化动作：私信“知识库”",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "知识库的价值不在收藏，而在把原文编译成可复用结构"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「想搭知识库的内容创作者」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：私信“知识库”。来源资产优先使用：Claude Code + Obsidian 知识管理实战 / 编译式知识管理工作流。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：Claude Code + Obsidian 知识管理实战 / 编译式知识管理工作流。"
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "title": "内容自动化不是偷懒，是把素材标准化",
+      "subtitle": "想提高内容效率的老板",
+      "account": "主号",
+      "line": "主号-AI",
+      "lineLabel": "AI 实战",
+      "platformText": "视频号 / 公众号 / 朋友圈",
+      "platforms": [
+        "视频号",
+        "公众号",
+        "朋友圈"
+      ],
+      "status": "待排期",
+      "statusType": "review",
+      "audience": "想提高内容效率的老板",
+      "goal": "私信“工作流”",
+      "coreView": "朋友圈和内容自动化不是偷懒，而是把素材标准化",
+      "sourceAssetIds": [
+        "A05"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A05",
+          "title": "朋友圈文案生成自动化工作流",
+          "line": "主号-AI",
+          "type": "自动化案例",
+          "source": "1-Brain/wiki/朋友圈文案生成自动化工作流.md",
+          "platforms": [
+            "视频号",
+            "朋友圈",
+            "公众号"
+          ],
+          "platformText": "视频号 / 朋友圈 / 公众号",
+          "goal": "建信任/转化",
+          "reuse": "n8n 演示、老板提效案例、咨询切口",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：朋友圈和内容自动化不是偷懒，而是把素材标准化\n来源资产：A05\n转化动作：私信“工作流”",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "1",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "朋友圈和内容自动化不是偷懒，而是把素材标准化"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「想提高内容效率的老板」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：私信“工作流”。来源资产优先使用：朋友圈文案生成自动化工作流。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "1 张资产",
+          "text": "当前母题可直接调用的核心资产：朋友圈文案生成自动化工作流。"
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "title": "会执行的 AI，才配叫工作流",
+      "subtitle": "初识 MCP/Skill 的 AI 用户",
+      "account": "主号",
+      "line": "主号-AI",
+      "lineLabel": "AI 实战",
+      "platformText": "小红书 / 视频号 / 公众号",
+      "platforms": [
+        "小红书",
+        "视频号",
+        "公众号"
+      ],
+      "status": "待排期",
+      "statusType": "review",
+      "audience": "初识 MCP/Skill 的 AI 用户",
+      "goal": "留言提问题",
+      "coreView": "真正有用的 AI，不只是会答题，而是会接系统、会执行",
+      "sourceAssetIds": [
+        "A07",
+        "A08"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A07",
+          "title": "MCP 和 Skill 的解释框架",
+          "line": "主号-AI",
+          "type": "解释型内容",
+          "source": "1-Brain/wiki/cards/MCP 和 Skill：一个让 AI 能干活，一个让 AI 会干活.md",
+          "platforms": [
+            "小红书",
+            "视频号",
+            "公众号"
+          ],
+          "platformText": "小红书 / 视频号 / 公众号",
+          "goal": "引流",
+          "reuse": "入门解释贴、图解卡、训练营话题",
+          "status": "已分类"
+        },
+        {
+          "id": "A08",
+          "title": "督工 Skill 与任务队列架构",
+          "line": "主号-AI",
+          "type": "系统方案",
+          "source": "1-Brain/wiki/督工Skill与任务队列架构.md",
+          "platforms": [
+            "公众号",
+            "视频号"
+          ],
+          "platformText": "公众号 / 视频号",
+          "goal": "建信任/转化",
+          "reuse": "多 Agent 工作流案例、咨询售卖素材",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：真正有用的 AI，不只是会答题，而是会接系统、会执行\n来源资产：A07 / A08\n转化动作：留言提问题",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "真正有用的 AI，不只是会答题，而是会接系统、会执行"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「初识 MCP/Skill 的 AI 用户」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：留言提问题。来源资产优先使用：MCP 和 Skill 的解释框架 / 督工 Skill 与任务队列架构。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：MCP 和 Skill 的解释框架 / 督工 Skill 与任务队列架构。"
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "title": "顾问能力不是说会，是能落到业务里",
+      "subtitle": "想做咨询或顾问的人",
+      "account": "主号",
+      "line": "主号-AI",
+      "lineLabel": "AI 实战",
+      "platformText": "公众号 / 视频号 / 朋友圈",
+      "platforms": [
+        "公众号",
+        "视频号",
+        "朋友圈"
+      ],
+      "status": "待挑选",
+      "statusType": "queued",
+      "audience": "想做咨询或顾问的人",
+      "goal": "私信预约沟通",
+      "coreView": "顾问能力不是嘴上说，会不会把方法落到真实业务才是关键",
+      "sourceAssetIds": [
+        "A20",
+        "A12"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A20",
+          "title": "恒基纺织 AI 转型案例",
+          "line": "主号-AI",
+          "type": "咨询案例",
+          "source": "1-Brain/wiki/制造业企业AI转型诊断与实施路径（恒基纺织）.md",
+          "platforms": [
+            "公众号",
+            "视频号",
+            "朋友圈"
+          ],
+          "platformText": "公众号 / 视频号 / 朋友圈",
+          "goal": "建信任/转化",
+          "reuse": "顾问案例、行业迁移法、企业服务背书",
+          "status": "已分类"
+        },
+        {
+          "id": "A12",
+          "title": "动觉品牌与轻食经营资料图谱",
+          "line": "主号-经营",
+          "type": "经营案例",
+          "source": "1-Brain/wiki/动觉品牌与轻食经营资料图谱.md",
+          "platforms": [
+            "公众号",
+            "视频号"
+          ],
+          "platformText": "公众号 / 视频号",
+          "goal": "建信任",
+          "reuse": "实体经营案例、选品逻辑、品牌叙事拆解",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：顾问能力不是嘴上说，会不会把方法落到真实业务才是关键\n来源资产：A20 / A12\n转化动作：私信预约沟通",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "顾问能力不是嘴上说，会不会把方法落到真实业务才是关键"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「想做咨询或顾问的人」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：私信预约沟通。来源资产优先使用：恒基纺织 AI 转型案例 / 动觉品牌与轻食经营资料图谱。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：恒基纺织 AI 转型案例 / 动觉品牌与轻食经营资料图谱。"
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "title": "真实经营内容，核心不是晒忙",
+      "subtitle": "想看真实门店经营的人",
+      "account": "主号",
+      "line": "主号-经营",
+      "lineLabel": "经营 / 成长",
+      "platformText": "朋友圈 / 视频号 / 公众号",
+      "platforms": [
+        "朋友圈",
+        "视频号",
+        "公众号"
+      ],
+      "status": "待排期",
+      "statusType": "review",
+      "audience": "想看真实门店经营的人",
+      "goal": "私信交流",
+      "coreView": "经营内容最有价值的不是晒忙，而是把背后的判断讲清楚",
+      "sourceAssetIds": [
+        "A12",
+        "A16"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A12",
+          "title": "动觉品牌与轻食经营资料图谱",
+          "line": "主号-经营",
+          "type": "经营案例",
+          "source": "1-Brain/wiki/动觉品牌与轻食经营资料图谱.md",
+          "platforms": [
+            "公众号",
+            "视频号"
+          ],
+          "platformText": "公众号 / 视频号",
+          "goal": "建信任",
+          "reuse": "实体经营案例、选品逻辑、品牌叙事拆解",
+          "status": "已分类"
+        },
+        {
+          "id": "A16",
+          "title": "IP打造理论",
+          "line": "主号-经营",
+          "type": "理论框架",
+          "source": "1-Brain/raw/clients/boli/IP 打造.docx.md",
+          "platforms": [
+            "朋友圈",
+            "视频号",
+            "公众号"
+          ],
+          "platformText": "朋友圈 / 视频号 / 公众号",
+          "goal": "建信任/促转化",
+          "reuse": "人设搭建、朋友圈节奏、信任公式拆解",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：经营内容最有价值的不是晒忙，而是把背后的判断讲清楚\n来源资产：A12 / A16\n转化动作：私信交流",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "经营内容最有价值的不是晒忙，而是把背后的判断讲清楚"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「想看真实门店经营的人」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：私信交流。来源资产优先使用：动觉品牌与轻食经营资料图谱 / IP打造理论。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：动觉品牌与轻食经营资料图谱 / IP打造理论。"
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "title": "轻食不该只有冷沙拉",
+      "subtitle": "想减脂但吃不下冷沙拉的女性",
+      "account": "品牌号",
+      "line": "品牌号-轻食",
+      "lineLabel": "品牌案例",
+      "platformText": "朋友圈 / 小红书 / 视频号",
+      "platforms": [
+        "朋友圈",
+        "小红书",
+        "视频号"
+      ],
+      "status": "进行中",
+      "statusType": "active",
+      "audience": "想减脂但吃不下冷沙拉的女性",
+      "goal": "到店、私信菜单",
+      "coreView": "轻食不该只有冷沙拉，中式暖餐更容易长期坚持",
+      "sourceAssetIds": [
+        "A11"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A11",
+          "title": "动觉融合轻食品牌手册",
+          "line": "品牌号-轻食",
+          "type": "品牌资料",
+          "source": "1-Brain/wiki/cards/动觉融合轻食品牌手册.md",
+          "platforms": [
+            "朋友圈",
+            "视频号",
+            "小红书"
+          ],
+          "platformText": "朋友圈 / 视频号 / 小红书",
+          "goal": "建信任/促转化",
+          "reuse": "品牌故事、产品逻辑、食材解释",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：轻食不该只有冷沙拉，中式暖餐更容易长期坚持\n来源资产：A11\n转化动作：到店、私信菜单",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "1",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "1",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "轻食不该只有冷沙拉，中式暖餐更容易长期坚持"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「想减脂但吃不下冷沙拉的女性」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：到店、私信菜单。来源资产优先使用：动觉融合轻食品牌手册。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [
+        {
+          "内容标题": "中式暖餐轻食为什么更适合长期减脂",
+          "所属选题": "T07",
+          "素材来源": "A11",
+          "目标平台": "朋友圈|小红书",
+          "负责人": "协作者,王辉",
+          "计划发布时间": "2026-04-23",
+          "当前状态": "待生产",
+          "发布链接": ""
+        }
+      ],
+      "receipts": [
+        {
+          "内容标题": "中式暖餐轻食为什么更适合长期减脂",
+          "平台": "朋友圈",
+          "发布链接": "",
+          "24h数据": "待回填",
+          "72h数据": "待回填",
+          "7d数据": "待回填",
+          "结论": ""
+        }
+      ],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "T",
+          "role": "Task",
+          "time": "2026-04-23",
+          "text": "中式暖餐轻食为什么更适合长期减脂 当前状态：待生产，负责人：协作者,王辉。"
+        },
+        {
+          "badge": "R",
+          "role": "Receipt",
+          "time": "朋友圈",
+          "text": "发布回执已建立，当前 24h / 72h / 7d 数据仍以“待回填”为主。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "1 张资产",
+          "text": "当前母题可直接调用的核心资产：动觉融合轻食品牌手册。"
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "title": "瑜伽课先给身体安全感，再谈强度",
+      "subtitle": "希望改善体态和状态的女性",
+      "account": "品牌号",
+      "line": "品牌号-瑜伽",
+      "lineLabel": "品牌案例",
+      "platformText": "朋友圈 / 视频号",
+      "platforms": [
+        "朋友圈",
+        "视频号"
+      ],
+      "status": "进行中",
+      "statusType": "active",
+      "audience": "希望改善体态和状态的女性",
+      "goal": "预约体验课",
+      "coreView": "真正能长期练下去的课程，先给身体安全感，再谈强度",
+      "sourceAssetIds": [
+        "A14",
+        "A15"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A14",
+          "title": "朋友圈风格指南",
+          "line": "品牌号-瑜伽",
+          "type": "表达规范",
+          "source": "knowledge-base/朋友圈/style.md",
+          "platforms": [
+            "朋友圈",
+            "视频号文案"
+          ],
+          "platformText": "朋友圈 / 视频号文案",
+          "goal": "风格统一",
+          "reuse": "朋友圈改写、口播基调、品牌号语气校准",
+          "status": "已分类"
+        },
+        {
+          "id": "A15",
+          "title": "朋友圈案例库",
+          "line": "品牌号-瑜伽",
+          "type": "案例集合",
+          "source": "knowledge-base/朋友圈/cases.md",
+          "platforms": [
+            "朋友圈",
+            "小红书",
+            "视频号"
+          ],
+          "platformText": "朋友圈 / 小红书 / 视频号",
+          "goal": "建信任/促转化",
+          "reuse": "学员反馈改写、产品预热、结果类内容",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：真正能长期练下去的课程，先给身体安全感，再谈强度\n来源资产：A14 / A15\n转化动作：预约体验课",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "2",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "真正能长期练下去的课程，先给身体安全感，再谈强度"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「希望改善体态和状态的女性」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：预约体验课。来源资产优先使用：朋友圈风格指南 / 朋友圈案例库。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：朋友圈风格指南 / 朋友圈案例库。"
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "title": "一节好课，关键是老师怎么读懂你",
+      "subtitle": "对课程专业度有疑问的新客",
+      "account": "品牌号",
+      "line": "品牌号-瑜伽",
+      "lineLabel": "品牌案例",
+      "platformText": "朋友圈 / 视频号 / 直播",
+      "platforms": [
+        "朋友圈",
+        "视频号",
+        "直播"
+      ],
+      "status": "待排期",
+      "statusType": "review",
+      "audience": "对课程专业度有疑问的新客",
+      "goal": "私信咨询",
+      "coreView": "一节好课不是动作堆砌，而是老师怎么读懂每个人",
+      "sourceAssetIds": [
+        "A15",
+        "A19"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A15",
+          "title": "朋友圈案例库",
+          "line": "品牌号-瑜伽",
+          "type": "案例集合",
+          "source": "knowledge-base/朋友圈/cases.md",
+          "platforms": [
+            "朋友圈",
+            "小红书",
+            "视频号"
+          ],
+          "platformText": "朋友圈 / 小红书 / 视频号",
+          "goal": "建信任/促转化",
+          "reuse": "学员反馈改写、产品预热、结果类内容",
+          "status": "已分类"
+        },
+        {
+          "id": "A19",
+          "title": "女性思维与目标用户语言",
+          "line": "品牌号-瑜伽",
+          "type": "用户洞察",
+          "source": "1-Brain/raw/clients/boli/女性思维.docx.md",
+          "platforms": [
+            "朋友圈",
+            "视频号",
+            "直播"
+          ],
+          "platformText": "朋友圈 / 视频号 / 直播",
+          "goal": "建信任/促转化",
+          "reuse": "用户语言库、课程销售表达、社群话术",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：一节好课不是动作堆砌，而是老师怎么读懂每个人\n来源资产：A15 / A19\n转化动作：私信咨询",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "一节好课不是动作堆砌，而是老师怎么读懂每个人"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「对课程专业度有疑问的新客」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：私信咨询。来源资产优先使用：朋友圈案例库 / 女性思维与目标用户语言。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：朋友圈案例库 / 女性思维与目标用户语言。"
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "饮食和运动联动，效果才会稳定",
+      "subtitle": "已经在运动但饮食乱的老客",
+      "account": "品牌号",
+      "line": "品牌号-轻食",
+      "lineLabel": "品牌案例",
+      "platformText": "朋友圈 / 小红书",
+      "platforms": [
+        "朋友圈",
+        "小红书"
+      ],
+      "status": "待排期",
+      "statusType": "review",
+      "audience": "已经在运动但饮食乱的老客",
+      "goal": "私信套餐",
+      "coreView": "饮食和运动联动，效果才稳定，不是靠狠劲硬扛",
+      "sourceAssetIds": [
+        "A11",
+        "A13"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A11",
+          "title": "动觉融合轻食品牌手册",
+          "line": "品牌号-轻食",
+          "type": "品牌资料",
+          "source": "1-Brain/wiki/cards/动觉融合轻食品牌手册.md",
+          "platforms": [
+            "朋友圈",
+            "视频号",
+            "小红书"
+          ],
+          "platformText": "朋友圈 / 视频号 / 小红书",
+          "goal": "建信任/促转化",
+          "reuse": "品牌故事、产品逻辑、食材解释",
+          "status": "已分类"
+        },
+        {
+          "id": "A13",
+          "title": "佰俪瑜伽与动觉轻食基础信息",
+          "line": "品牌号-瑜伽/轻食",
+          "type": "基础资料",
+          "source": "knowledge-base/_shared/company-info.md",
+          "platforms": [
+            "全平台"
+          ],
+          "platformText": "全平台",
+          "goal": "建信任",
+          "reuse": "账号简介、介绍文案、合作页、话术底稿",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：饮食和运动联动，效果才稳定，不是靠狠劲硬扛\n来源资产：A11 / A13\n转化动作：私信套餐",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "2",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "饮食和运动联动，效果才稳定，不是靠狠劲硬扛"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「已经在运动但饮食乱的老客」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：私信套餐。来源资产优先使用：动觉融合轻食品牌手册 / 佰俪瑜伽与动觉轻食基础信息。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：动觉融合轻食品牌手册 / 佰俪瑜伽与动觉轻食基础信息。"
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "title": "双线并行不失焦，靠的是母题统一",
+      "subtitle": "害怕自己多线并行会失焦的人",
+      "account": "主号",
+      "line": "主号-成长",
+      "lineLabel": "经营 / 成长",
+      "platformText": "朋友圈 / 视频号",
+      "platforms": [
+        "朋友圈",
+        "视频号"
+      ],
+      "status": "待挑选",
+      "statusType": "queued",
+      "audience": "害怕自己多线并行会失焦的人",
+      "goal": "关注、留言",
+      "coreView": "双线并行的关键不是多发，而是母题统一和节奏统一",
+      "sourceAssetIds": [
+        "A16",
+        "A17"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A16",
+          "title": "IP打造理论",
+          "line": "主号-经营",
+          "type": "理论框架",
+          "source": "1-Brain/raw/clients/boli/IP 打造.docx.md",
+          "platforms": [
+            "朋友圈",
+            "视频号",
+            "公众号"
+          ],
+          "platformText": "朋友圈 / 视频号 / 公众号",
+          "goal": "建信任/促转化",
+          "reuse": "人设搭建、朋友圈节奏、信任公式拆解",
+          "status": "已分类"
+        },
+        {
+          "id": "A17",
+          "title": "短视频工作流",
+          "line": "全线通用",
+          "type": "SOP",
+          "source": "knowledge-base/短视频/structures.md",
+          "platforms": [
+            "抖音",
+            "视频号",
+            "小红书"
+          ],
+          "platformText": "抖音 / 视频号 / 小红书",
+          "goal": "风格统一",
+          "reuse": "出镜脚本、剪辑流程、协作交接标准",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：双线并行的关键不是多发，而是母题统一和节奏统一\n来源资产：A16 / A17\n转化动作：关注、留言",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "2",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "双线并行的关键不是多发，而是母题统一和节奏统一"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「害怕自己多线并行会失焦的人」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：关注、留言。来源资产优先使用：IP打造理论 / 短视频工作流。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：IP打造理论 / 短视频工作流。"
+        }
+      ]
+    },
+    {
+      "id": "T12",
+      "title": "一个母题，可以拆出多个平台版本",
+      "subtitle": "对内容分发迷茫的创作者",
+      "account": "主号",
+      "line": "主号-AI",
+      "lineLabel": "AI 实战",
+      "platformText": "公众号 / 小红书 / 视频号",
+      "platforms": [
+        "公众号",
+        "小红书",
+        "视频号"
+      ],
+      "status": "待排期",
+      "statusType": "review",
+      "audience": "对内容分发迷茫的创作者",
+      "goal": "私信“选题”",
+      "coreView": "一个母题可以拆成长文、短视频和平台改写，不必每次从零开始",
+      "sourceAssetIds": [
+        "A09",
+        "A10"
+      ],
+      "sourceAssets": [
+        {
+          "id": "A09",
+          "title": "AI录音硬件与内容分发选题策略",
+          "line": "主号-AI",
+          "type": "选题方法",
+          "source": "1-Brain/wiki/AI录音硬件与内容分发选题策略.md",
+          "platforms": [
+            "小红书",
+            "视频号",
+            "公众号"
+          ],
+          "platformText": "小红书 / 视频号 / 公众号",
+          "goal": "引流",
+          "reuse": "母题拆解、设备测评、内容分发案例",
+          "status": "已分类"
+        },
+        {
+          "id": "A10",
+          "title": "AI内容写作与五层架构素材库",
+          "line": "主号-AI",
+          "type": "素材库方法",
+          "source": "1-Brain/wiki/AI内容写作与五层架构素材库.md",
+          "platforms": [
+            "公众号",
+            "小红书"
+          ],
+          "platformText": "公众号 / 小红书",
+          "goal": "建信任",
+          "reuse": "写作资产管理、内容复用教程、课程大纲",
+          "status": "已分类"
+        }
+      ],
+      "summary": "核心观点：一个母题可以拆成长文、短视频和平台改写，不必每次从零开始\n来源资产：A09 / A10\n转化动作：私信“选题”",
+      "metrics": [
+        {
+          "label": "Assets",
+          "value": "2",
+          "delta": "来源资产"
+        },
+        {
+          "label": "Tasks",
+          "value": "0",
+          "delta": "内容任务"
+        },
+        {
+          "label": "Published",
+          "value": "0",
+          "delta": "已发布"
+        },
+        {
+          "label": "Platforms",
+          "value": "3",
+          "delta": "多端改写"
+        }
+      ],
+      "angles": [
+        {
+          "key": "A",
+          "title": "核心观点",
+          "body": "一个母题可以拆成长文、短视频和平台改写，不必每次从零开始"
+        },
+        {
+          "key": "B",
+          "title": "用户切口",
+          "body": "目标用户是「对内容分发迷茫的创作者」，这条内容先解决为什么值得做，再解释怎么开始。"
+        },
+        {
+          "key": "C",
+          "title": "转化收口",
+          "body": "本条内容最后只收一个动作：私信“选题”。来源资产优先使用：AI录音硬件与内容分发选题策略 / AI内容写作与五层架构素材库。"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "name": "选题",
+          "state": "done",
+          "sub": "完成"
+        },
+        {
+          "id": "02",
+          "name": "排期",
+          "state": "active",
+          "sub": "当前"
+        },
+        {
+          "id": "03",
+          "name": "生产",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "04",
+          "name": "审核",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "05",
+          "name": "发布",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "06",
+          "name": "数据",
+          "state": "pending",
+          "sub": "待执行"
+        },
+        {
+          "id": "07",
+          "name": "复盘",
+          "state": "pending",
+          "sub": "待执行"
+        }
+      ],
+      "tasks": [],
+      "receipts": [],
+      "activity": [
+        {
+          "badge": "S",
+          "role": "Sync",
+          "time": "2026-04-23 08:42",
+          "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。"
+        },
+        {
+          "badge": "A",
+          "role": "Assets",
+          "time": "2 张资产",
+          "text": "当前母题可直接调用的核心资产：AI录音硬件与内容分发选题策略 / AI内容写作与五层架构素材库。"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "A01",
+      "title": "AI五层架构",
+      "line": "主号-AI",
+      "type": "框架观点",
+      "source": "1-Brain/raw/writing/ai-architecture/公众号文章_AI五层架构.html.md",
+      "platforms": [
+        "公众号",
+        "小红书",
+        "视频号"
+      ],
+      "platformText": "公众号 / 小红书 / 视频号",
+      "goal": "建信任",
+      "reuse": "五层图解长文、3分钟口播、朋友圈认知贴",
+      "status": "已分类"
+    },
+    {
+      "id": "A02",
+      "title": "Claude Code + Obsidian 知识管理实战",
+      "line": "主号-AI",
+      "type": "案例方法",
+      "source": "1-Brain/raw/writing/articles/公众号文章：Claude Code + Obsidian 实战...md",
+      "platforms": [
+        "公众号",
+        "视频号",
+        "朋友圈"
+      ],
+      "platformText": "公众号 / 视频号 / 朋友圈",
+      "goal": "建信任/引流",
+      "reuse": "方法论长文、工作流短视频、清单贴",
+      "status": "已分类"
+    },
+    {
+      "id": "A03",
+      "title": "编译式知识管理工作流",
+      "line": "主号-AI",
+      "type": "方法论",
+      "source": "1-Brain/wiki/编译式知识管理工作流（Claude Code + Obsidian）.md",
+      "platforms": [
+        "公众号",
+        "小红书"
+      ],
+      "platformText": "公众号 / 小红书",
+      "goal": "建信任",
+      "reuse": "工作流拆解、知识库演示、服务说明",
+      "status": "已分类"
+    },
+    {
+      "id": "A04",
+      "title": "公众号内容导出与知识归档工具链",
+      "line": "主号-AI",
+      "type": "工具链",
+      "source": "1-Brain/wiki/公众号内容导出与知识归档工具链.md",
+      "platforms": [
+        "公众号",
+        "视频号",
+        "小红书"
+      ],
+      "platformText": "公众号 / 视频号 / 小红书",
+      "goal": "引流",
+      "reuse": "工具教程、踩坑复盘、服务场景演示",
+      "status": "已分类"
+    },
+    {
+      "id": "A05",
+      "title": "朋友圈文案生成自动化工作流",
+      "line": "主号-AI",
+      "type": "自动化案例",
+      "source": "1-Brain/wiki/朋友圈文案生成自动化工作流.md",
+      "platforms": [
+        "视频号",
+        "朋友圈",
+        "公众号"
+      ],
+      "platformText": "视频号 / 朋友圈 / 公众号",
+      "goal": "建信任/转化",
+      "reuse": "n8n 演示、老板提效案例、咨询切口",
+      "status": "已分类"
+    },
+    {
+      "id": "A06",
+      "title": "AI原生开发工作流与环境分层",
+      "line": "主号-AI",
+      "type": "方法论",
+      "source": "1-Brain/wiki/AI原生开发工作流与环境分层.md",
+      "platforms": [
+        "公众号",
+        "小红书"
+      ],
+      "platformText": "公众号 / 小红书",
+      "goal": "建信任",
+      "reuse": "分层图解、顾问方法、培训内容",
+      "status": "已分类"
+    },
+    {
+      "id": "A07",
+      "title": "MCP 和 Skill 的解释框架",
+      "line": "主号-AI",
+      "type": "解释型内容",
+      "source": "1-Brain/wiki/cards/MCP 和 Skill：一个让 AI 能干活，一个让 AI 会干活.md",
+      "platforms": [
+        "小红书",
+        "视频号",
+        "公众号"
+      ],
+      "platformText": "小红书 / 视频号 / 公众号",
+      "goal": "引流",
+      "reuse": "入门解释贴、图解卡、训练营话题",
+      "status": "已分类"
+    },
+    {
+      "id": "A08",
+      "title": "督工 Skill 与任务队列架构",
+      "line": "主号-AI",
+      "type": "系统方案",
+      "source": "1-Brain/wiki/督工Skill与任务队列架构.md",
+      "platforms": [
+        "公众号",
+        "视频号"
+      ],
+      "platformText": "公众号 / 视频号",
+      "goal": "建信任/转化",
+      "reuse": "多 Agent 工作流案例、咨询售卖素材",
+      "status": "已分类"
+    },
+    {
+      "id": "A09",
+      "title": "AI录音硬件与内容分发选题策略",
+      "line": "主号-AI",
+      "type": "选题方法",
+      "source": "1-Brain/wiki/AI录音硬件与内容分发选题策略.md",
+      "platforms": [
+        "小红书",
+        "视频号",
+        "公众号"
+      ],
+      "platformText": "小红书 / 视频号 / 公众号",
+      "goal": "引流",
+      "reuse": "母题拆解、设备测评、内容分发案例",
+      "status": "已分类"
+    },
+    {
+      "id": "A10",
+      "title": "AI内容写作与五层架构素材库",
+      "line": "主号-AI",
+      "type": "素材库方法",
+      "source": "1-Brain/wiki/AI内容写作与五层架构素材库.md",
+      "platforms": [
+        "公众号",
+        "小红书"
+      ],
+      "platformText": "公众号 / 小红书",
+      "goal": "建信任",
+      "reuse": "写作资产管理、内容复用教程、课程大纲",
+      "status": "已分类"
+    },
+    {
+      "id": "A11",
+      "title": "动觉融合轻食品牌手册",
+      "line": "品牌号-轻食",
+      "type": "品牌资料",
+      "source": "1-Brain/wiki/cards/动觉融合轻食品牌手册.md",
+      "platforms": [
+        "朋友圈",
+        "视频号",
+        "小红书"
+      ],
+      "platformText": "朋友圈 / 视频号 / 小红书",
+      "goal": "建信任/促转化",
+      "reuse": "品牌故事、产品逻辑、食材解释",
+      "status": "已分类"
+    },
+    {
+      "id": "A12",
+      "title": "动觉品牌与轻食经营资料图谱",
+      "line": "主号-经营",
+      "type": "经营案例",
+      "source": "1-Brain/wiki/动觉品牌与轻食经营资料图谱.md",
+      "platforms": [
+        "公众号",
+        "视频号"
+      ],
+      "platformText": "公众号 / 视频号",
+      "goal": "建信任",
+      "reuse": "实体经营案例、选品逻辑、品牌叙事拆解",
+      "status": "已分类"
+    },
+    {
+      "id": "A13",
+      "title": "佰俪瑜伽与动觉轻食基础信息",
+      "line": "品牌号-瑜伽/轻食",
+      "type": "基础资料",
+      "source": "knowledge-base/_shared/company-info.md",
+      "platforms": [
+        "全平台"
+      ],
+      "platformText": "全平台",
+      "goal": "建信任",
+      "reuse": "账号简介、介绍文案、合作页、话术底稿",
+      "status": "已分类"
+    },
+    {
+      "id": "A14",
+      "title": "朋友圈风格指南",
+      "line": "品牌号-瑜伽",
+      "type": "表达规范",
+      "source": "knowledge-base/朋友圈/style.md",
+      "platforms": [
+        "朋友圈",
+        "视频号文案"
+      ],
+      "platformText": "朋友圈 / 视频号文案",
+      "goal": "风格统一",
+      "reuse": "朋友圈改写、口播基调、品牌号语气校准",
+      "status": "已分类"
+    },
+    {
+      "id": "A15",
+      "title": "朋友圈案例库",
+      "line": "品牌号-瑜伽",
+      "type": "案例集合",
+      "source": "knowledge-base/朋友圈/cases.md",
+      "platforms": [
+        "朋友圈",
+        "小红书",
+        "视频号"
+      ],
+      "platformText": "朋友圈 / 小红书 / 视频号",
+      "goal": "建信任/促转化",
+      "reuse": "学员反馈改写、产品预热、结果类内容",
+      "status": "已分类"
+    },
+    {
+      "id": "A16",
+      "title": "IP打造理论",
+      "line": "主号-经营",
+      "type": "理论框架",
+      "source": "1-Brain/raw/clients/boli/IP 打造.docx.md",
+      "platforms": [
+        "朋友圈",
+        "视频号",
+        "公众号"
+      ],
+      "platformText": "朋友圈 / 视频号 / 公众号",
+      "goal": "建信任/促转化",
+      "reuse": "人设搭建、朋友圈节奏、信任公式拆解",
+      "status": "已分类"
+    },
+    {
+      "id": "A17",
+      "title": "短视频工作流",
+      "line": "全线通用",
+      "type": "SOP",
+      "source": "knowledge-base/短视频/structures.md",
+      "platforms": [
+        "抖音",
+        "视频号",
+        "小红书"
+      ],
+      "platformText": "抖音 / 视频号 / 小红书",
+      "goal": "风格统一",
+      "reuse": "出镜脚本、剪辑流程、协作交接标准",
+      "status": "已分类"
+    },
+    {
+      "id": "A18",
+      "title": "爆款标题公式与钩子库",
+      "line": "全线通用",
+      "type": "表达资产",
+      "source": "knowledge-base/短视频/hooks.md",
+      "platforms": [
+        "小红书",
+        "公众号",
+        "朋友圈",
+        "短视频标题"
+      ],
+      "platformText": "小红书 / 公众号 / 朋友圈 / 短视频标题",
+      "goal": "引流",
+      "reuse": "标题库、封面文案、开头 3 秒钩子",
+      "status": "已分类"
+    },
+    {
+      "id": "A19",
+      "title": "女性思维与目标用户语言",
+      "line": "品牌号-瑜伽",
+      "type": "用户洞察",
+      "source": "1-Brain/raw/clients/boli/女性思维.docx.md",
+      "platforms": [
+        "朋友圈",
+        "视频号",
+        "直播"
+      ],
+      "platformText": "朋友圈 / 视频号 / 直播",
+      "goal": "建信任/促转化",
+      "reuse": "用户语言库、课程销售表达、社群话术",
+      "status": "已分类"
+    },
+    {
+      "id": "A20",
+      "title": "恒基纺织 AI 转型案例",
+      "line": "主号-AI",
+      "type": "咨询案例",
+      "source": "1-Brain/wiki/制造业企业AI转型诊断与实施路径（恒基纺织）.md",
+      "platforms": [
+        "公众号",
+        "视频号",
+        "朋友圈"
+      ],
+      "platformText": "公众号 / 视频号 / 朋友圈",
+      "goal": "建信任/转化",
+      "reuse": "顾问案例、行业迁移法、企业服务背书",
+      "status": "已分类"
+    }
+  ],
+  "highPerf": [
+    {
+      "编号": "H01",
+      "内容标题": "AI五层架构总览",
+      "内容线": "主号-AI",
+      "来源": "A01",
+      "候选依据": "结构完整、可图解、可长短兼容",
+      "适合二创方向": "长文、图文清单、口播",
+      "待补数据": "阅读、收藏、咨询"
+    },
+    {
+      "编号": "H02",
+      "内容标题": "Claude Code + Obsidian 知识管理实战",
+      "内容线": "主号-AI",
+      "来源": "A02",
+      "候选依据": "真实实践感强，方法和故事兼备",
+      "适合二创方向": "经验贴、演示视频、训练营引流",
+      "待补数据": "阅读、加微、私信"
+    },
+    {
+      "编号": "H03",
+      "内容标题": "朋友圈文案生成自动化工作流",
+      "内容线": "主号-AI",
+      "来源": "A05",
+      "候选依据": "与老板提效直接相关，转化场景清晰",
+      "适合二创方向": "视频演示、案例图文、咨询切口",
+      "待补数据": "播放、咨询、私信"
+    },
+    {
+      "编号": "H04",
+      "内容标题": "中式暖餐轻食不是冷沙拉替代品",
+      "内容线": "品牌号-轻食",
+      "来源": "A11",
+      "候选依据": "差异化鲜明，容易引发认同和转发",
+      "适合二创方向": "小红书笔记、门店视频、菜单解释",
+      "待补数据": "收藏、到店、咨询"
+    },
+    {
+      "编号": "H05",
+      "内容标题": "身体安全感比意志力更重要",
+      "内容线": "品牌号-瑜伽",
+      "来源": "朋友圈/cases.md` 条12",
+      "候选依据": "反常识强，能破除焦虑型表达",
+      "适合二创方向": "短视频、朋友圈、直播开场",
+      "待补数据": "播放、咨询"
+    },
+    {
+      "编号": "H06",
+      "内容标题": "从不敢穿紧身衣到和 20 斤告别",
+      "内容线": "品牌号-瑜伽",
+      "来源": "朋友圈/cases.md` 条6",
+      "候选依据": "数字和变化具体，结果导向清晰",
+      "适合二创方向": "前后对比、案例图文、见证短视频",
+      "待补数据": "收藏、咨询、预约"
+    },
+    {
+      "编号": "H07",
+      "内容标题": "学员原话见证第一次练习体感",
+      "内容线": "品牌号-瑜伽",
+      "来源": "朋友圈/cases.md` 条7",
+      "候选依据": "借他人说，信任转换效率高",
+      "适合二创方向": "朋友圈、视频号、社群分享",
+      "待补数据": "点赞、咨询"
+    },
+    {
+      "编号": "H08",
+      "内容标题": "知识库不是收藏夹，是内容中台",
+      "内容线": "主号-AI",
+      "来源": "本次中台方案 + A03",
+      "候选依据": "观点明确，适合建立主号的长期标签",
+      "适合二创方向": "长文、演讲稿、视频号系列",
+      "待补数据": "阅读、关注、咨询"
+    },
+    {
+      "编号": "H09",
+      "内容标题": "经营内容最有价值的是判断，不是晒忙",
+      "内容线": "主号-经营",
+      "来源": "A12 A16",
+      "候选依据": "能把真实经营和方法论连接起来",
+      "适合二创方向": "视频号口播、朋友圈认知贴",
+      "待补数据": "收藏、关注"
+    },
+    {
+      "编号": "H10",
+      "内容标题": "一个母题多端改写",
+      "内容线": "主号-AI",
+      "来源": "A09 A10",
+      "候选依据": "直接回应内容焦虑，复用潜力大",
+      "适合二创方向": "图文 SOP、短视频教程、长文方法论",
+      "待补数据": "阅读、收藏、私信"
+    }
+  ],
+  "reviews": [
+    {
+      "周次": "Week 1",
+      "AI母题": "AI五层架构",
+      "品牌案例": "中式暖餐轻食差异化",
+      "表现最佳内容": "",
+      "问题内容": "",
+      "复盘结论": "待首周发布后填写",
+      "下周动作": "确定放大内容并补充资产"
+    }
+  ]
+}

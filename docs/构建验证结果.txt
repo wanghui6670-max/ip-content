@@ -1,0 +1,8 @@
+验证时间：2026-04-23
+验证对象：apps/web-dashboard
+验证命令：npm run build:all
+验证结果：成功
+说明：
+- 已在新仓库目录结构下完成构建验证。
+- 验证时使用临时本地依赖目录完成构建；启动骨架本身不包含 node_modules。
+- 如需在你的机器上再次构建，请先在 apps/web-dashboard 下执行 npm install。
