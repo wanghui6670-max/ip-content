@@ -2,6 +2,7 @@ import "./styles.css";
 import "./mode.css";
 import { dashboardData } from "./generated/dashboard-data.js";
 import { COMMAND_TABS, buildCommandText } from "./lib/commands.js";
+import { copyText, showToast } from "./lib/feedback.js";
 import { escapeHtml } from "./lib/format.js";
 import { resolveBuildMode, resolveSync } from "./lib/mode.js";
 import {
@@ -17,6 +18,12 @@ import {
   buildTopicList,
 } from "./lib/render.js";
 import { defaultSchedule, loadStoredSchedule, saveStoredSchedule } from "./lib/schedule.js";
+import {
+  currentTopic,
+  filteredTopics,
+  lineCounts,
+  resolveInitialTopicId,
+} from "./lib/topics.js";
 
 const STORAGE_KEY = "ip-content-web-dashboard-v2";
 const buildModeMeta = resolveBuildMode(dashboardData.meta || {});
@@ -25,7 +32,7 @@ const syncMeta = resolveSync(dashboardData.meta?.sync || {});
 const state = {
   query: "",
   lineFilter: "all",
-  selectedId: resolveInitialTopicId(),
+  selectedId: resolveInitialTopicId(dashboardData),
   commandTab: COMMAND_TABS[0],
 };
 
@@ -39,14 +46,6 @@ function bootstrap() {
   hydrateScheduleForm(loadStoredSchedule(STORAGE_KEY, dashboardData));
   bindAll();
   renderAll();
-}
-
-function resolveInitialTopicId() {
-  const paired = dashboardData.meta?.defaultPairing?.aiTopic;
-  if (paired && dashboardData.topics.some((topic) => topic.id === paired)) {
-    return paired;
-  }
-  return dashboardData.topics[0]?.id || "";
 }
 
 function hydrateStaticMeta() {
@@ -79,60 +78,17 @@ function persistSchedule() {
   saveStoredSchedule(STORAGE_KEY, readScheduleValues());
 }
 
-function filterTopic(topic) {
-  const q = state.query.trim().toLowerCase();
-  const filter = state.lineFilter;
-  const matchesFilter =
-    filter === "all" ||
-    (filter === "ai" && topic.lineLabel === "AI 实战") ||
-    (filter === "brand" && topic.lineLabel === "品牌案例") ||
-    (filter === "ops" && topic.lineLabel === "经营 / 成长");
-
-  if (!matchesFilter) return false;
-  if (!q) return true;
-
-  return [
-    topic.id,
-    topic.title,
-    topic.subtitle,
-    topic.account,
-    topic.line,
-    topic.platformText,
-    topic.goal,
-  ]
-    .filter(Boolean)
-    .some((value) => String(value).toLowerCase().includes(q));
-}
-
-function filteredTopics() {
-  return dashboardData.topics.filter(filterTopic);
-}
-
-function findTopic(topicId) {
-  return dashboardData.topics.find((topic) => topic.id === topicId) || dashboardData.topics[0] || null;
-}
-
-function currentTopic() {
-  const list = filteredTopics();
-  return list.find((topic) => topic.id === state.selectedId) || findTopic(state.selectedId);
-}
-
 function renderCounters(topics) {
+  const counts = lineCounts(dashboardData);
   document.getElementById("countTopics").textContent = String(dashboardData.meta?.counts?.topics || dashboardData.topics.length);
   document.getElementById("countTasks").textContent = String(dashboardData.meta?.counts?.tasks || 0);
   document.getElementById("countHighPerf").textContent = String(dashboardData.meta?.counts?.highPerf || 0);
   document.getElementById("countSync").textContent = syncMeta.isOnline ? "Live" : "Offline";
   document.getElementById("countFiltered").textContent = `${topics.length} / ${dashboardData.topics.length}`;
-  document.getElementById("lineAll").textContent = String(dashboardData.topics.length);
-  document.getElementById("lineAi").textContent = String(
-    dashboardData.topics.filter((topic) => topic.lineLabel === "AI 实战").length,
-  );
-  document.getElementById("lineBrand").textContent = String(
-    dashboardData.topics.filter((topic) => topic.lineLabel === "品牌案例").length,
-  );
-  document.getElementById("lineOps").textContent = String(
-    dashboardData.topics.filter((topic) => topic.lineLabel === "经营 / 成长").length,
-  );
+  document.getElementById("lineAll").textContent = String(counts.all);
+  document.getElementById("lineAi").textContent = String(counts.ai);
+  document.getElementById("lineBrand").textContent = String(counts.brand);
+  document.getElementById("lineOps").textContent = String(counts.ops);
 }
 
 function renderModePanel() {
@@ -148,7 +104,7 @@ function renderModePanel() {
 }
 
 function renderSidebar() {
-  const topics = filteredTopics();
+  const topics = filteredTopics(dashboardData, state);
   renderCounters(topics);
   document.getElementById("topicList").innerHTML = topics.length
     ? buildTopicList(topics, state.selectedId)
@@ -180,7 +136,7 @@ function renderTopicPanel(topic) {
 function renderCommandDock() {
   const values = readScheduleValues();
   persistSchedule();
-  const topic = currentTopic();
+  const topic = currentTopic(dashboardData, state);
   document.getElementById("pairingText").textContent = `AI ${values.aiTopic} / 品牌 ${values.brandTopic}`;
   document.getElementById("commandOutput").textContent = buildCommandText({
     tab: state.commandTab,
@@ -219,38 +175,13 @@ function renderReview() {
 }
 
 function renderAll() {
-  const topic = currentTopic();
+  const topic = currentTopic(dashboardData, state);
   renderModePanel();
   renderSidebar();
   renderTopicPanel(topic);
   renderCommandDock();
   renderSyncPanel();
   renderReview();
-}
-
-async function copyText(text) {
-  if (navigator.clipboard && window.isSecureContext) {
-    await navigator.clipboard.writeText(text);
-    return;
-  }
-
-  const area = document.createElement("textarea");
-  area.value = text;
-  area.style.position = "fixed";
-  area.style.left = "-9999px";
-  document.body.appendChild(area);
-  area.focus();
-  area.select();
-  document.execCommand("copy");
-  area.remove();
-}
-
-function showToast(text) {
-  const node = document.getElementById("toast");
-  node.textContent = text;
-  node.classList.add("visible");
-  clearTimeout(showToast.timer);
-  showToast.timer = window.setTimeout(() => node.classList.remove("visible"), 1500);
 }
 
 function bindSearch() {
@@ -302,7 +233,7 @@ function bindCommands() {
   });
 
   document.getElementById("setAiTopic").addEventListener("click", () => {
-    const topic = currentTopic();
+    const topic = currentTopic(dashboardData, state);
     if (!topic) return;
     document.getElementById("aiTopic").value = topic.id;
     state.commandTab = "week";
@@ -311,7 +242,7 @@ function bindCommands() {
   });
 
   document.getElementById("setBrandTopic").addEventListener("click", () => {
-    const topic = currentTopic();
+    const topic = currentTopic(dashboardData, state);
     if (!topic) return;
     document.getElementById("brandTopic").value = topic.id;
     state.commandTab = "week";
@@ -322,7 +253,7 @@ function bindCommands() {
   document.getElementById("copyTopicPrompt").addEventListener("click", async () => {
     const text = buildCommandText({
       tab: "prompt",
-      topic: currentTopic(),
+      topic: currentTopic(dashboardData, state),
       values: readScheduleValues(),
       modeMeta: buildModeMeta,
     });
