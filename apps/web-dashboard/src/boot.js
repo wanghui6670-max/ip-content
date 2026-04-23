@@ -44,7 +44,7 @@ function bootstrap() {
 
 function renderAll() {
   const topic = currentTopic(dashboardData, state);
-  renderModePanel(buildModeMeta);
+  renderModePanel(buildModeMeta, syncMeta);
   renderSidebar({ dashboardData, state, syncMeta });
   renderTopicPanel(topic);
   renderCommandDock({ dashboardData, state, storageKey: STORAGE_KEY, buildModeMeta });
