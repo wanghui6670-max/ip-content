@@ -2,6 +2,7 @@ import "./styles.css";
 import "./mode.css";
 import { dashboardData } from "./generated/dashboard-data.js";
 import { COMMAND_TABS, buildCommandText } from "./lib/commands.js";
+import { escapeHtml } from "./lib/format.js";
 import { resolveBuildMode, resolveSync } from "./lib/mode.js";
 import {
   buildActivity,
@@ -161,10 +162,10 @@ function renderTopicPanel(topic) {
   document.getElementById("topicTitle").textContent = topic.title;
   document.getElementById("topicSubtitle").textContent = topic.subtitle;
   document.getElementById("topicTags").innerHTML = `
-    <span class="meta-pill">${topic.account}</span>
-    <span class="meta-pill">${topic.lineLabel}</span>
-    <span class="meta-pill">${topic.platformText}</span>
-    <span class="meta-pill emphasis">${topic.goal}</span>
+    <span class="meta-pill">${escapeHtml(topic.account)}</span>
+    <span class="meta-pill">${escapeHtml(topic.lineLabel)}</span>
+    <span class="meta-pill">${escapeHtml(topic.platformText)}</span>
+    <span class="meta-pill emphasis">${escapeHtml(topic.goal)}</span>
   `;
   document.getElementById("metricGrid").innerHTML = buildMetrics(topic);
   document.getElementById("stageTrack").innerHTML = buildSteps(topic);
