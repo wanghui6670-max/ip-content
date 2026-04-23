@@ -9,7 +9,6 @@ import {
   buildActivity,
   buildAngles,
   buildAssets,
-  buildHighPerfList,
   buildMetrics,
   buildReceipts,
   buildShell,
@@ -17,11 +16,16 @@ import {
   buildTasks,
   buildTopicList,
 } from "./lib/render.js";
+import {
+  renderCounters,
+  renderModePanel,
+  renderReview,
+  renderSyncPanel,
+} from "./lib/panels.js";
 import { defaultSchedule, loadStoredSchedule, saveStoredSchedule } from "./lib/schedule.js";
 import {
   currentTopic,
   filteredTopics,
-  lineCounts,
   resolveInitialTopicId,
 } from "./lib/topics.js";
 
@@ -78,34 +82,9 @@ function persistSchedule() {
   saveStoredSchedule(STORAGE_KEY, readScheduleValues());
 }
 
-function renderCounters(topics) {
-  const counts = lineCounts(dashboardData);
-  document.getElementById("countTopics").textContent = String(dashboardData.meta?.counts?.topics || dashboardData.topics.length);
-  document.getElementById("countTasks").textContent = String(dashboardData.meta?.counts?.tasks || 0);
-  document.getElementById("countHighPerf").textContent = String(dashboardData.meta?.counts?.highPerf || 0);
-  document.getElementById("countSync").textContent = syncMeta.isOnline ? "Live" : "Offline";
-  document.getElementById("countFiltered").textContent = `${topics.length} / ${dashboardData.topics.length}`;
-  document.getElementById("lineAll").textContent = String(counts.all);
-  document.getElementById("lineAi").textContent = String(counts.ai);
-  document.getElementById("lineBrand").textContent = String(counts.brand);
-  document.getElementById("lineOps").textContent = String(counts.ops);
-}
-
-function renderModePanel() {
-  const badge = document.getElementById("buildModeBadge");
-  badge.textContent = buildModeMeta.label;
-  badge.classList.toggle("mode-badge--fallback", buildModeMeta.isFallbackMode);
-  badge.classList.toggle("mode-badge--full", !buildModeMeta.isFallbackMode);
-
-  document.getElementById("buildModeDescription").textContent = buildModeMeta.description;
-  document.getElementById("buildModeValue").textContent = buildModeMeta.buildMode;
-  document.getElementById("sourceContext").textContent = buildModeMeta.sourceContext;
-  document.getElementById("generatedAt").textContent = buildModeMeta.generatedAt || "未知";
-}
-
 function renderSidebar() {
   const topics = filteredTopics(dashboardData, state);
-  renderCounters(topics);
+  renderCounters({ dashboardData, topics, syncMeta });
   document.getElementById("topicList").innerHTML = topics.length
     ? buildTopicList(topics, state.selectedId)
     : `<div class="empty-card">当前筛选条件下没有匹配的选题。</div>`;
@@ -149,39 +128,14 @@ function renderCommandDock() {
   });
 }
 
-function renderSyncPanel() {
-  const link = document.getElementById("syncLink");
-  document.getElementById("syncStatus").textContent = syncMeta.statusLabel;
-  document.getElementById("syncBase").textContent = syncMeta.baseName || "未配置";
-  document.getElementById("syncToken").textContent = syncMeta.tokenMasked || "未配置";
-  document.getElementById("syncMirror").textContent = syncMeta.mirroredAt || "未拉镜像";
-  link.href = syncMeta.url || "#";
-  link.textContent = syncMeta.linkText;
-  link.classList.toggle("disabled", !syncMeta.url);
-}
-
-function renderReview() {
-  const review = dashboardData.reviews?.[0];
-  document.getElementById("highPerfList").innerHTML = buildHighPerfList(dashboardData.highPerf || []);
-  if (!review) {
-    document.getElementById("reviewWeek").textContent = "当前周";
-    document.getElementById("reviewSummary").textContent = "待补复盘结论";
-    document.getElementById("reviewNext").textContent = "待补下周动作";
-    return;
-  }
-  document.getElementById("reviewWeek").textContent = review["周次"] || "当前周";
-  document.getElementById("reviewSummary").textContent = review["复盘结论"] || "待补复盘结论";
-  document.getElementById("reviewNext").textContent = review["下周动作"] || "待补下周动作";
-}
-
 function renderAll() {
   const topic = currentTopic(dashboardData, state);
-  renderModePanel();
+  renderModePanel(buildModeMeta);
   renderSidebar();
   renderTopicPanel(topic);
   renderCommandDock();
-  renderSyncPanel();
-  renderReview();
+  renderSyncPanel(syncMeta);
+  renderReview(dashboardData);
 }
 
 function bindSearch() {
