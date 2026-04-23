@@ -1,0 +1,116 @@
+# Backlog
+
+This backlog starts after PR #1, the P0/P1 baseline PR.
+
+## P1 dashboard productization
+
+### P1.1 Overview and view structure
+
+Goal: make the dashboard easier to understand as a daily operating workspace.
+
+Tasks:
+
+- add clear sections for Overview, Topics, Tasks, Publish, Review, and Assets
+- keep the current single page layout until routing is needed
+- preserve the current topic detail flow
+- keep tests and web build green
+
+### P1.2 Data confidence and source panel
+
+Goal: make data freshness and source mode visible.
+
+Tasks:
+
+- show full source vs fallback snapshot status clearly
+- show generated time and mirror time in one place
+- add empty states for missing source files
+- add copy explaining what users can trust in fallback mode
+
+### P1.3 Task and publish views
+
+Goal: make execution work easier to track.
+
+Tasks:
+
+- separate content tasks from publish receipts
+- surface owner, planned date, status, and platform
+- add simple filters for status and platform
+- keep table rendering small and dependency free
+
+### P1.4 Review and asset views
+
+Goal: make weekly review and reusable assets easier to inspect.
+
+Tasks:
+
+- create a review panel for current week conclusions and next actions
+- create an asset list grouped by content line
+- show asset reuse direction and linked topic ids
+
+## P2 sync package
+
+### P2.1 feishu-sync skeleton
+
+Goal: move sync-related logic toward `packages/feishu-sync`.
+
+Tasks:
+
+- add package structure
+- define mirror manifest shape
+- define local CSV read/write helpers
+- keep secrets out of committed files
+
+### P2.2 mirror validation
+
+Goal: detect missing or malformed mirror data before build.
+
+Tasks:
+
+- validate required CSV headers
+- report missing tables clearly
+- add validation output for build logs
+
+## P3 CLI foundation
+
+### P3.1 ip-cli skeleton
+
+Goal: start a small local CLI for repeatable operations.
+
+Tasks:
+
+- add CLI package under `tools/ip-cli`
+- expose basic commands for status and validation
+- call shared domain helpers instead of duplicating rules
+
+### P3.2 local validation command
+
+Goal: allow local preflight checks before deploy.
+
+Tasks:
+
+- validate dashboard generated data
+- validate mirror metadata
+- validate domain stage rules
+- print actionable errors
+
+## P4 access and release hardening
+
+### P4.1 deployment access policy
+
+Goal: make deployment access expectations explicit.
+
+Tasks:
+
+- document public vs protected deployment modes
+- document when Feishu URLs may be exposed
+- add release checklist
+
+### P4.2 release notes
+
+Goal: make project changes traceable.
+
+Tasks:
+
+- add changelog
+- summarize each merged PR
+- track breaking changes and migration notes

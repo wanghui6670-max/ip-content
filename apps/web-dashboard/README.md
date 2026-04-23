@@ -2,6 +2,29 @@
 
 这是新仓库中的网页端应用，目录为 `apps/web-dashboard`。
 
+## 当前实现状态
+
+当前页面入口已经切到：
+
+- `src/boot.js`
+
+`src/main.js` 已经收口为兼容壳，只负责导入 `src/boot.js`。这样可以避免旧本地引用失效，同时确保当前页面只维护一套模块化启动逻辑。
+
+当前拆出的模块包括：
+
+- `src/lib/app-shell.js`
+- `src/lib/command-dock.js`
+- `src/lib/commands.js`
+- `src/lib/feedback.js`
+- `src/lib/format.js`
+- `src/lib/interactions.js`
+- `src/lib/mode.js`
+- `src/lib/panels.js`
+- `src/lib/render.js`
+- `src/lib/schedule.js`
+- `src/lib/topic-panel.js`
+- `src/lib/topics.js`
+
 ## 本地开发
 
 ```bash
@@ -21,6 +44,24 @@ npm run build:all
 构建产物在：
 
 `apps/web-dashboard/dist`
+
+## 本地测试
+
+```bash
+cd apps/web-dashboard
+npm test
+```
+
+当前 `npm test` 覆盖的是页面入口所依赖的纯逻辑模块，例如：
+
+- build mode / sync helper
+- command builder
+- command dock helper
+- topic filter / current topic helper
+- panel renderers
+- render helpers
+- app shell helper
+- interaction bindings
 
 ## 数据来源
 
@@ -42,6 +83,23 @@ npm run build:all
 - `data/feishu-mirror/周复盘.csv`（若存在）
 
 这样可以保证你在新仓库初始化阶段，也能继续构建和部署网页端。
+
+## 当前 UI 改造方向
+
+当前正在推进三件事：
+
+1. 继续保持 `boot.js` 只负责启动装配
+2. 在页面上显式展示 build mode / source context，避免 fallback 构建被误读成完整源数据构建
+3. 给重构中的纯逻辑模块补自动化测试
+
+## CI 说明
+
+当前仓库 CI 会在 `build-web` job 中：
+
+1. 安装 `apps/web-dashboard` 依赖
+2. 运行 `npm test`
+3. 运行 `npm run build:web`
+4. 验证 `dist/index.html` 存在
 
 ## 安全说明
 
