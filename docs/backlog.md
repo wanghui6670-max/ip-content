@@ -4,7 +4,7 @@ This backlog starts after PR #2, the P0/P1 baseline PR.
 
 ## P1 dashboard productization
 
-### P1.1 Overview and view structure — in review
+### P1.1 Overview and view structure — merged
 
 Goal: make the dashboard easier to understand as a daily operating workspace.
 
@@ -22,16 +22,23 @@ Implementation notes:
 - added `test/views.test.js`
 - injected a view navigation panel above the existing dashboard content
 
-### P1.2 Data confidence and source panel
+### P1.2 Data confidence and source panel — in review
 
 Goal: make data freshness and source mode visible.
 
 Tasks:
 
-- show full source vs fallback snapshot status clearly
-- show generated time and mirror time in one place
-- add empty states for missing source files
-- add copy explaining what users can trust in fallback mode
+- [x] show full source vs fallback snapshot status clearly
+- [x] show generated time and mirror time in one place
+- [x] add empty states for missing source files
+- [x] add copy explaining what users can trust in fallback mode
+
+Implementation notes:
+
+- added data confidence cards inside the Build Mode panel
+- added `src/confidence.css`
+- updated `src/lib/panels.js`
+- expanded `test/panels.test.js`
 
 ### P1.3 Task and publish views
 

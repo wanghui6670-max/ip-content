@@ -1,6 +1,7 @@
 import "./styles.css";
 import "./mode.css";
 import "./view.css";
+import "./confidence.css";
 import { dashboardData } from "./generated/dashboard-data.js";
 import { hydrateStaticMeta, renderSidebar } from "./lib/app-shell.js";
 import { COMMAND_TABS } from "./lib/commands.js";
@@ -44,7 +45,7 @@ function bootstrap() {
 
 function renderAll() {
   const topic = currentTopic(dashboardData, state);
-  renderModePanel(buildModeMeta);
+  renderModePanel(buildModeMeta, syncMeta);
   renderSidebar({ dashboardData, state, syncMeta });
   renderTopicPanel(topic);
   renderCommandDock({ dashboardData, state, storageKey: STORAGE_KEY, buildModeMeta });
