@@ -6,6 +6,25 @@ on:
     branches: [main]
 
 jobs:
+  validate-domain:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run content-domain tests
+        working-directory: packages/content-domain
+        run: npm test
+
   build-web:
     runs-on: ubuntu-latest
 
