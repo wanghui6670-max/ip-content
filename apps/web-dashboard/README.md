@@ -2,6 +2,22 @@
 
 这是新仓库中的网页端应用，目录为 `apps/web-dashboard`。
 
+## 当前实现状态
+
+当前页面入口已经切到：
+
+- `src/boot.js`
+
+并且已经开始把原本集中在旧入口文件中的逻辑拆到这些模块里：
+
+- `src/lib/format.js`
+- `src/lib/mode.js`
+- `src/lib/schedule.js`
+- `src/lib/commands.js`
+- `src/lib/render.js`
+
+旧的 `src/main.js` 暂时仍保留在仓库中，作为迁移过程中的参考文件，但当前页面已不再以它作为入口。
+
 ## 本地开发
 
 ```bash
@@ -42,6 +58,13 @@ npm run build:all
 - `data/feishu-mirror/周复盘.csv`（若存在）
 
 这样可以保证你在新仓库初始化阶段，也能继续构建和部署网页端。
+
+## 当前 UI 改造方向
+
+当前正在推进两件事：
+
+1. 逐步拆分旧的入口逻辑，降低单文件复杂度
+2. 在页面上显式展示 build mode / source context，避免 fallback 构建被误读成完整源数据构建
 
 ## 安全说明
 
