@@ -1,5 +1,6 @@
 import "./styles.css";
 import "./mode.css";
+import "./view.css";
 import { dashboardData } from "./generated/dashboard-data.js";
 import { hydrateStaticMeta, renderSidebar } from "./lib/app-shell.js";
 import { COMMAND_TABS } from "./lib/commands.js";
@@ -15,6 +16,7 @@ import {
 import { loadStoredSchedule } from "./lib/schedule.js";
 import { renderTopicPanel } from "./lib/topic-panel.js";
 import { currentTopic, resolveInitialTopicId } from "./lib/topics.js";
+import { hydrateViewStructure } from "./lib/views.js";
 
 const STORAGE_KEY = "ip-content-web-dashboard-v2";
 const buildModeMeta = resolveBuildMode(dashboardData.meta || {});
@@ -33,6 +35,7 @@ function bootstrap() {
   const app = document.getElementById("app");
   app.innerHTML = buildShell({ stageCount: dashboardData.topics?.[0]?.steps?.length || 7 });
 
+  hydrateViewStructure();
   hydrateStaticMeta(dashboardData);
   hydrateScheduleForm(loadStoredSchedule(STORAGE_KEY, dashboardData));
   bindAllInteractions({ dashboardData, state, storageKey: STORAGE_KEY, buildModeMeta, renderAll });
