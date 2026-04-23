@@ -1,0 +1,31 @@
+.mode-banner {
+  margin-bottom: 18px;
+}
+
+.mode-description {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.mode-badge {
+  font-weight: 700;
+}
+
+.mode-badge--fallback {
+  background: rgba(246, 201, 107, 0.14);
+  color: #ffe0a3;
+}
+
+.mode-badge--full {
+  background: rgba(123, 215, 160, 0.14);
+  color: #d1f6de;
+}
+
+.info-list.compact {
+  margin-top: 14px;
+}
+
+.info-list.compact strong {
+  text-align: right;
+}
