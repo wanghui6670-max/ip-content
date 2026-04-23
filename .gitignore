@@ -1,18 +1,30 @@
 # Node
 node_modules/
 *.log
+coverage/
+*.tmp
+*.local
 
 # Build outputs
 apps/web-dashboard/dist/
 apps/web-dashboard/src/generated/dashboard-data.js
+apps/web-dashboard/.vite/
 
 # Local secrets
 .env
 .env.*
 !.env.example
 data/feishu-mirror/base-config.json
+*.pem
+*.key
+*.p12
 
-# OS
+# Mirror cache / temp files
+data/feishu-mirror/cache/
+data/feishu-mirror/*.bak
+data/feishu-mirror/*.tmp
+
+# OS / local tools
 .DS_Store
 Thumbs.db
 .vercel
