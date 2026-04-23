@@ -33,12 +33,12 @@ test("filteredTopics respects lineFilter and query", () => {
   assert.equal(queryOnly[0].id, "T07");
 });
 
-test("currentTopic returns selected filtered topic or fallback", () => {
+test("currentTopic keeps selected topic as fallback when filter excludes it", () => {
   const selected = currentTopic(dashboardData, { lineFilter: "all", query: "", selectedId: "T07" });
   const fallback = currentTopic(dashboardData, { lineFilter: "ai", query: "", selectedId: "T07" });
 
   assert.equal(selected.id, "T07");
-  assert.equal(fallback.id, "T01");
+  assert.equal(fallback.id, "T07");
 });
 
 test("lineCounts summarizes topic buckets", () => {
