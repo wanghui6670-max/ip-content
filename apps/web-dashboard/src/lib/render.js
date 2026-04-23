@@ -63,6 +63,7 @@ export function buildShell({ stageCount = 7 } = {}) {
               <div><span>Source</span><strong id="sourceContext">-</strong></div>
               <div><span>Generated</span><strong id="generatedAt">-</strong></div>
             </div>
+            <div class="data-confidence-grid" id="dataConfidenceGrid"></div>
           </section>
 
           <section class="panel hero-panel">
