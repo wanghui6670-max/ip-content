@@ -1,0 +1,45 @@
+name: Feature request
+description: 提交功能增强、重构或新模块需求
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标
+      description: 这项功能要解决什么问题
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 所属区域
+      options:
+        - web-dashboard
+        - content-domain
+        - feishu-sync
+        - ip-cli
+        - ci / deployment
+        - docs
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 范围
+      description: 请说明做什么 / 不做什么
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      description: 用列表描述验收口径
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充说明
+      description: 可补充数据模式、依赖、风险、截图、原型等
