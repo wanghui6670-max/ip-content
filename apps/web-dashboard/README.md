@@ -8,17 +8,22 @@
 
 - `src/boot.js`
 
-并且已经开始把原本集中在旧入口文件中的逻辑拆到这些模块里：
+`src/main.js` 已经收口为兼容壳，只负责导入 `src/boot.js`。这样可以避免旧本地引用失效，同时确保当前页面只维护一套模块化启动逻辑。
 
-- `src/lib/format.js`
-- `src/lib/mode.js`
-- `src/lib/schedule.js`
+当前拆出的模块包括：
+
+- `src/lib/app-shell.js`
+- `src/lib/command-dock.js`
 - `src/lib/commands.js`
-- `src/lib/render.js`
-- `src/lib/topics.js`
 - `src/lib/feedback.js`
-
-旧的 `src/main.js` 暂时仍保留在仓库中，作为迁移过程中的参考文件，但当前页面已不再以它作为入口。
+- `src/lib/format.js`
+- `src/lib/interactions.js`
+- `src/lib/mode.js`
+- `src/lib/panels.js`
+- `src/lib/render.js`
+- `src/lib/schedule.js`
+- `src/lib/topic-panel.js`
+- `src/lib/topics.js`
 
 ## 本地开发
 
@@ -51,7 +56,12 @@ npm test
 
 - build mode / sync helper
 - command builder
+- command dock helper
 - topic filter / current topic helper
+- panel renderers
+- render helpers
+- app shell helper
+- interaction bindings
 
 ## 数据来源
 
@@ -78,7 +88,7 @@ npm test
 
 当前正在推进三件事：
 
-1. 逐步拆分旧的入口逻辑，降低单文件复杂度
+1. 继续保持 `boot.js` 只负责启动装配
 2. 在页面上显式展示 build mode / source context，避免 fallback 构建被误读成完整源数据构建
 3. 给重构中的纯逻辑模块补自动化测试
 
