@@ -158,6 +158,36 @@ def sanitized_sync_url(raw_url: str) -> str:
     return ""
 
 
+def build_mode_label(mode: str) -> str:
+    if mode == "full_sources":
+        return "Full Source"
+    return "Fallback Snapshot"
+
+
+def build_mode_description(mode: str) -> str:
+    if mode == "full_sources":
+        return "当前页面数据由完整源数据与镜像重新导出生成。"
+    return "当前页面数据来自已生成快照与镜像回退构建，适合迁移期持续部署。"
+
+
+def build_sync_activity(sync_payload: dict[str, Any], build_mode: str) -> dict[str, str] | None:
+    mirrored_at = str(sync_payload.get("mirroredAt", "")).replace("T", " ")
+    if not sync_payload.get("configured") or not mirrored_at:
+        return None
+
+    if build_mode == "full_sources":
+        text = "飞书在线主库最近一次镜像已同步，当前页面数据由完整源数据重新导出。"
+    else:
+        text = "检测到最近一次飞书镜像时间，但当前页面仍处于回退构建模式，请以 Build Mode 提示为准。"
+
+    return {
+        "badge": "S",
+        "role": "Sync",
+        "time": mirrored_at[:16],
+        "text": text,
+    }
+
+
 def select_content_context() -> dict[str, Any]:
     for candidate in CONTENT_SOURCE_CANDIDATES:
         has_full_sources = all(
@@ -231,19 +261,13 @@ def build_topic_activity(
     source_assets: list[dict[str, Any]],
     task_rows: list[dict[str, str]],
     receipt_rows: list[dict[str, str]],
-    manifest: dict[str, Any] | None,
+    sync_payload: dict[str, Any],
+    build_mode: str,
 ) -> list[dict[str, str]]:
     activity: list[dict[str, str]] = []
-    if manifest:
-        mirrored_at = str(manifest.get("mirrored_at", "")).replace("T", " ")
-        activity.append(
-            {
-                "badge": "S",
-                "role": "Sync",
-                "time": mirrored_at[:16],
-                "text": "飞书在线主库最近一次镜像已同步，本地页面数据与镜像状态保持一致。",
-            }
-        )
+    sync_activity = build_sync_activity(sync_payload, build_mode)
+    if sync_activity:
+        activity.append(sync_activity)
     if task_rows:
         current = task_rows[0]
         activity.append(
@@ -310,7 +334,7 @@ def build_dashboard_payload_from_sources(context: dict[str, Any]) -> dict[str, A
     task_rows = read_csv_rows(preferred_csv(context, "内容任务.csv"))
     receipt_rows = read_csv_rows(preferred_csv(context, "发布回执.csv"))
     review_rows = read_csv_rows(preferred_csv(context, "周复盘.csv"))
-    manifest = read_json(Path(context["feishu_manifest"]))
+    sync_payload = build_sync_payload(context)
 
     assets_by_id: dict[str, dict[str, Any]] = {}
     assets: list[dict[str, Any]] = []
@@ -392,7 +416,14 @@ def build_dashboard_payload_from_sources(context: dict[str, Any]) -> dict[str, A
                 "steps": build_steps(row.get("状态", ""), topic_task_rows),
                 "tasks": topic_task_rows,
                 "receipts": topic_receipt_rows,
-                "activity": build_topic_activity(topic_id, source_assets, topic_task_rows, topic_receipt_rows, manifest),
+                "activity": build_topic_activity(
+                    topic_id,
+                    source_assets,
+                    topic_task_rows,
+                    topic_receipt_rows,
+                    sync_payload,
+                    context["mode"],
+                ),
             }
         )
 
@@ -408,8 +439,11 @@ def build_dashboard_payload_from_sources(context: dict[str, Any]) -> dict[str, A
             "projectName": "IP Factory",
             "projectSubtitle": "双线 IP 内容中台网页端",
             "buildMode": context["mode"],
+            "buildModeLabel": build_mode_label(context["mode"]),
+            "buildModeDescription": build_mode_description(context["mode"]),
+            "isFallbackMode": context["mode"] != "full_sources",
             "sourceContext": context["name"],
-            "sync": build_sync_payload(context),
+            "sync": sync_payload,
             "counts": {
                 "assets": len(assets),
                 "topics": len(topics),
@@ -442,19 +476,32 @@ def build_dashboard_payload_from_generated_fallback(context: dict[str, Any]) -> 
             "未找到可复用的 src/generated/dashboard-data.json，且当前目录也不包含完整的 01-资产库/03-选题中心 源数据。"
         )
 
+    sync_payload = build_sync_payload(context)
     meta = dict(payload.get("meta") or {})
     meta["generatedAt"] = dt.datetime.now().isoformat(timespec="seconds")
     meta["buildMode"] = context["mode"]
+    meta["buildModeLabel"] = build_mode_label(context["mode"])
+    meta["buildModeDescription"] = build_mode_description(context["mode"])
+    meta["isFallbackMode"] = context["mode"] != "full_sources"
     meta["sourceContext"] = context["name"]
-    meta["sync"] = build_sync_payload(context)
+    meta["sync"] = sync_payload
 
     reviews = payload.get("reviews") or []
     review_rows = read_csv_rows(preferred_csv(context, "周复盘.csv"))
     if review_rows:
         reviews = review_rows
 
+    topics = payload.get("topics") or []
+    sync_activity = build_sync_activity(sync_payload, context["mode"])
+    for topic in topics:
+        activity = [item for item in (topic.get("activity") or []) if item.get("role") != "Sync"]
+        if sync_activity:
+            activity = [sync_activity, *activity]
+        topic["activity"] = activity[:4]
+
     payload["meta"] = meta
     payload["reviews"] = reviews
+    payload["topics"] = topics
     return payload
 
 
