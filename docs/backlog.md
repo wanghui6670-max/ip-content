@@ -1,19 +1,26 @@
 # Backlog
 
-This backlog starts after PR #1, the P0/P1 baseline PR.
+This backlog starts after PR #2, the P0/P1 baseline PR.
 
 ## P1 dashboard productization
 
-### P1.1 Overview and view structure
+### P1.1 Overview and view structure — in review
 
 Goal: make the dashboard easier to understand as a daily operating workspace.
 
 Tasks:
 
-- add clear sections for Overview, Topics, Tasks, Publish, Review, and Assets
-- keep the current single page layout until routing is needed
-- preserve the current topic detail flow
-- keep tests and web build green
+- [x] add clear sections for Overview, Topics, Tasks, Publish, Review, and Assets
+- [x] keep the current single page layout until routing is needed
+- [x] preserve the current topic detail flow
+- [x] keep tests and web build green
+
+Implementation notes:
+
+- added `src/lib/views.js`
+- added `src/view.css`
+- added `test/views.test.js`
+- injected a view navigation panel above the existing dashboard content
 
 ### P1.2 Data confidence and source panel
 

@@ -2,6 +2,7 @@ import { buildCommandText } from "./commands.js";
 import { hydrateScheduleForm, normalizeCommandTab, readScheduleValues, renderCommandDock, resetScheduleForm } from "./command-dock.js";
 import { copyText, showToast } from "./feedback.js";
 import { currentTopic } from "./topics.js";
+import { bindViewNavigation } from "./views.js";
 
 export function bindSearch({ state, renderAll }) {
   const inputs = [document.getElementById("sidebarSearch"), document.getElementById("globalSearch")];
@@ -104,4 +105,5 @@ export function bindAllInteractions({ dashboardData, state, storageKey, buildMod
   bindLineFilters({ state, renderAll });
   bindTopicList({ state, renderAll });
   bindCommandDock({ dashboardData, state, storageKey, buildModeMeta });
+  bindViewNavigation();
 }
