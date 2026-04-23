@@ -19,12 +19,14 @@
 - [x] `apps/web-dashboard` 可独立 `npm run build:all`
 - [x] 仓库根可执行 `npm run build:web`
 - [x] 飞书主库 URL 默认脱敏，不在前端公开暴露
+- [x] `packages/content-domain` 已具备最小骨架与自动化测试
+- [x] `web-dashboard` 已具备纯逻辑测试入口
 
 当前仍在推进：
 
-- [ ] 仓库工程护栏（CI、模板、SECURITY、文档收口）
-- [ ] `web-dashboard` 结构重构与模式提示
-- [ ] `packages/content-domain` 最小可运行骨架
+- [ ] 仓库工程护栏的最终收口
+- [ ] `web-dashboard` 继续拆分旧入口逻辑
+- [ ] 旧 `src/main.js` 收口为兼容壳
 - [ ] `packages/feishu-sync` 与 `tools/ip-cli` 正式实现
 
 ## 快速开始
@@ -51,6 +53,18 @@ npm run build:all
 npm run build:web
 ```
 
+### 本地测试
+
+```bash
+# 领域层测试
+cd packages/content-domain
+npm test
+
+# dashboard 纯逻辑测试
+cd apps/web-dashboard
+npm test
+```
+
 ### Vercel 构建入口
 
 仓库根 `package.json` 已提供：
@@ -64,6 +78,15 @@ npm run vercel-build
 ```text
 apps/web-dashboard/dist
 ```
+
+## 当前 CI 覆盖范围
+
+当前 CI 会跑两类检查：
+
+1. `packages/content-domain` 测试
+2. `apps/web-dashboard` 测试 + 构建
+
+也就是说，仓库现在不再只是“能 build”，而是已经开始具备基础回归保护。
 
 ## 目录结构
 
@@ -92,13 +115,14 @@ ip-content/
 - Vercel 基础部署链路
 - 回退构建模式
 - 脱敏后的飞书镜像配置约束
+- 基础自动化测试与 CI
 
 尚未完全落地的部分：
 
 - 飞书在线同步 Worker / Sync 模块
-- 领域模型与状态规则抽象
+- 领域模型与状态规则进一步抽象
 - `ip` CLI 的真实实现
-- 自动化 CI / 模板 / 安全治理
+- 自动化治理的最终收口
 
 ## 数据模式说明
 
@@ -144,5 +168,5 @@ ip-content/
 
 1. 收口 P0 工程护栏
 2. 对 `web-dashboard` 做小步重构
-3. 建立 `content-domain` 最小骨架
+3. 继续让 `content-domain` 承接 exporter / UI 规则
 4. 再进入 `feishu-sync` 与 `ip-cli`
