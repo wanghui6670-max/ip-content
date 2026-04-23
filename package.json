@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "scripts": {
     "dev:web": "npm --prefix apps/web-dashboard run dev",
+    "vercel-build": "npm --prefix apps/web-dashboard ci && npm --prefix apps/web-dashboard run build:all",
+    "build": "npm run build:web",
     "build:web": "npm --prefix apps/web-dashboard run build:all",
     "preview:web": "npm --prefix apps/web-dashboard run preview"
   }
