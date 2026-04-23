@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security issue
+    url: https://github.com/wanghui6670-max/ip-content/security
+    about: 涉及敏感信息或暴露问题时，请不要直接公开 issue
