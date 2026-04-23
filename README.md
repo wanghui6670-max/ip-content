@@ -21,13 +21,14 @@
 - [x] 飞书主库 URL 默认脱敏，不在前端公开暴露
 - [x] `packages/content-domain` 已具备最小骨架与自动化测试
 - [x] `web-dashboard` 已具备纯逻辑测试入口
+- [x] `apps/web-dashboard/src/main.js` 已收口为兼容壳
 
 当前仍在推进：
 
-- [ ] 仓库工程护栏的最终收口
-- [ ] `web-dashboard` 继续拆分旧入口逻辑
-- [ ] 旧 `src/main.js` 收口为兼容壳
-- [ ] `packages/feishu-sync` 与 `tools/ip-cli` 正式实现
+- [ ] P1 dashboard 产品化
+- [ ] `packages/feishu-sync` 正式实现
+- [ ] `tools/ip-cli` 正式实现
+- [ ] 部署访问与发布治理收口
 
 ## 快速开始
 
@@ -116,13 +117,14 @@ ip-content/
 - 回退构建模式
 - 脱敏后的飞书镜像配置约束
 - 基础自动化测试与 CI
+- dashboard 模块化入口
 
 尚未完全落地的部分：
 
 - 飞书在线同步 Worker / Sync 模块
 - 领域模型与状态规则进一步抽象
 - `ip` CLI 的真实实现
-- 自动化治理的最终收口
+- P1 dashboard 产品化视图
 
 ## 数据模式说明
 
@@ -164,9 +166,13 @@ ip-content/
 
 ## 下一阶段
 
-下一阶段的直接目标是：
+后续任务入口见：
 
-1. 收口 P0 工程护栏
-2. 对 `web-dashboard` 做小步重构
-3. 继续让 `content-domain` 承接 exporter / UI 规则
-4. 再进入 `feishu-sync` 与 `ip-cli`
+- `docs/backlog.md`
+
+下一阶段会优先推进：
+
+1. P1 dashboard 产品化
+2. P2 `feishu-sync`
+3. P3 `ip-cli`
+4. P4 访问与发布治理
