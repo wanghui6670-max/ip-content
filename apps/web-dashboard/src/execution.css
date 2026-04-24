@@ -1,0 +1,53 @@
+.execution-filter-bar {
+  margin: 16px 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.execution-filter-bar > div {
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.execution-filter-bar span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.execution-filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.execution-filter-chip {
+  min-height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.execution-filter-chip.active {
+  color: white;
+  background: var(--accent-soft);
+  border-color: rgba(103, 168, 255, 0.24);
+}
+
+.execution-card {
+  min-height: 138px;
+}
+
+@media (max-width: 800px) {
+  .execution-filter-bar {
+    grid-template-columns: 1fr;
+  }
+}
