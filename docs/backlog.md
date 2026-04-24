@@ -40,7 +40,7 @@ Implementation notes:
 - updated `src/lib/panels.js`
 - expanded `test/panels.test.js`
 
-### P1.3 Task and publish views — in review
+### P1.3 Task and publish views — merged
 
 Goal: make execution work easier to track.
 
@@ -58,15 +58,23 @@ Implementation notes:
 - connected execution filters to dashboard state
 - added `test/execution.test.js`
 
-### P1.4 Review and asset views
+### P1.4 Review and asset views — in review
 
 Goal: make weekly review and reusable assets easier to inspect.
 
 Tasks:
 
-- create a review panel for current week conclusions and next actions
-- create an asset list grouped by content line
-- show asset reuse direction and linked topic ids
+- [x] create a review panel for current week conclusions and next actions
+- [x] create an asset list grouped by content line
+- [x] show asset reuse direction and linked topic ids
+
+Implementation notes:
+
+- added `src/lib/review-assets.js`
+- added `src/review-assets.css`
+- expanded review insight cards
+- grouped source assets by content line
+- added `test/review-assets.test.js`
 
 ## P2 sync package
 

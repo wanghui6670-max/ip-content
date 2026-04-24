@@ -3,6 +3,7 @@ import "./mode.css";
 import "./view.css";
 import "./confidence.css";
 import "./execution.css";
+import "./review-assets.css";
 import { dashboardData } from "./generated/dashboard-data.js";
 import { hydrateStaticMeta, renderSidebar } from "./lib/app-shell.js";
 import { COMMAND_TABS } from "./lib/commands.js";

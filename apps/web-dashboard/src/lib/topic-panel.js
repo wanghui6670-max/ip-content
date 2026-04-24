@@ -1,9 +1,9 @@
 import { renderExecutionPanel } from "./execution.js";
 import { escapeHtml } from "./format.js";
+import { renderAssetPanel } from "./review-assets.js";
 import {
   buildActivity,
   buildAngles,
-  buildAssets,
   buildMetrics,
   buildSteps,
 } from "./render.js";
@@ -24,7 +24,7 @@ export function renderTopicPanel(topic, state = {}) {
   document.getElementById("stageTrack").innerHTML = buildSteps(topic);
   document.getElementById("angleGrid").innerHTML = buildAngles(topic);
   document.getElementById("topicSummary").textContent = topic.summary || "";
-  document.getElementById("assetGrid").innerHTML = buildAssets(topic);
+  renderAssetPanel(topic);
   renderExecutionPanel(topic, state);
   document.getElementById("feedList").innerHTML = buildActivity(topic);
 }
