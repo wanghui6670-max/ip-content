@@ -58,7 +58,7 @@ Implementation notes:
 - connected execution filters to dashboard state
 - added `test/execution.test.js`
 
-### P1.4 Review and asset views — in review
+### P1.4 Review and asset views — merged
 
 Goal: make weekly review and reusable assets easier to inspect.
 
@@ -78,16 +78,25 @@ Implementation notes:
 
 ## P2 sync package
 
-### P2.1 feishu-sync skeleton
+### P2.1 feishu-sync skeleton — in review
 
 Goal: move sync-related logic toward `packages/feishu-sync`.
 
 Tasks:
 
-- add package structure
-- define mirror manifest shape
-- define local CSV read/write helpers
-- keep secrets out of committed files
+- [x] add package structure
+- [x] define mirror manifest shape
+- [x] define local CSV read/write helpers
+- [x] keep secrets out of committed files
+
+Implementation notes:
+
+- added `packages/feishu-sync/package.json`
+- added manifest helpers
+- added CSV parsing and header validation helpers
+- added mirror table contracts
+- added package tests
+- added `validate-sync` CI job
 
 ### P2.2 mirror validation
 
