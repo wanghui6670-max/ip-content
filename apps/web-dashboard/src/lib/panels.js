@@ -1,5 +1,6 @@
 import { escapeHtml } from "./format.js";
 import { buildHighPerfList } from "./render.js";
+import { renderReviewPanel } from "./review-assets.js";
 import { lineCounts } from "./topics.js";
 
 export function renderCounters({ dashboardData, topics, syncMeta }) {
@@ -95,15 +96,6 @@ export function renderSyncPanel(syncMeta) {
 }
 
 export function renderReview(dashboardData) {
-  const review = dashboardData.reviews?.[0];
   document.getElementById("highPerfList").innerHTML = buildHighPerfList(dashboardData.highPerf || []);
-  if (!review) {
-    document.getElementById("reviewWeek").textContent = "当前周";
-    document.getElementById("reviewSummary").textContent = "待补复盘结论";
-    document.getElementById("reviewNext").textContent = "待补下周动作";
-    return;
-  }
-  document.getElementById("reviewWeek").textContent = review["周次"] || "当前周";
-  document.getElementById("reviewSummary").textContent = review["复盘结论"] || "待补复盘结论";
-  document.getElementById("reviewNext").textContent = review["下周动作"] || "待补下周动作";
+  renderReviewPanel(dashboardData);
 }
