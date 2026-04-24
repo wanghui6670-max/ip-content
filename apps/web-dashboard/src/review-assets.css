@@ -1,0 +1,53 @@
+.review-insight-grid {
+  margin: 14px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.review-insight-card {
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.review-insight-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.review-insight-card strong {
+  display: block;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.review-insight-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.asset-group + .asset-group {
+  margin-top: 14px;
+}
+
+.asset-group__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.asset-group__grid {
+  display: grid;
+  gap: 12px;
+}
+
+.asset-card--grouped {
+  min-height: 146px;
+}
