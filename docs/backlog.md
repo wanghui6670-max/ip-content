@@ -129,6 +129,20 @@ Tasks:
 - report missing upstream tables separately from execution tables
 - keep sensitive links and tokens out of public output
 
+First confirmed upstream source:
+
+- `喂鸭子喝咖啡｜抖音账号拆解` wiki base
+- table: `视频拆解`
+- category: `博主内容拆解`
+- contract scope: field names only; do not commit app token, table id, view id, or raw long-form copy
+
+Initial field groups:
+
+- source identity: `标题`, `视频链接`, `发布时间`, `附件`, `集数`, `时长`
+- metrics: `点赞`, `评论`, `收藏`, `分享`
+- analysis: `内容角度`, `hook类型`, `页面摘要/AI章节`, `核心内容`, `情绪/商业价值`, `为什么有效`, `文案风格`, `结构拆解`, `开头钩子`, `中段推进`, `结尾收束`, `金句`
+- processing: `处理状态`, `原始文案`, `清洗文案`, `单选`
+
 ## P2.5 IP input and knowledge modeling
 
 ### P2.5.1 Feishu table model for IP inputs
