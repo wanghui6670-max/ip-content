@@ -2,6 +2,7 @@ import "./styles.css";
 import "./mode.css";
 import "./view.css";
 import "./confidence.css";
+import "./execution.css";
 import { dashboardData } from "./generated/dashboard-data.js";
 import { hydrateStaticMeta, renderSidebar } from "./lib/app-shell.js";
 import { COMMAND_TABS } from "./lib/commands.js";
@@ -28,6 +29,8 @@ const state = {
   lineFilter: "all",
   selectedId: resolveInitialTopicId(dashboardData),
   commandTab: COMMAND_TABS[0],
+  taskStatusFilter: "all",
+  taskPlatformFilter: "all",
 };
 
 bootstrap();
@@ -47,7 +50,7 @@ function renderAll() {
   const topic = currentTopic(dashboardData, state);
   renderModePanel(buildModeMeta, syncMeta);
   renderSidebar({ dashboardData, state, syncMeta });
-  renderTopicPanel(topic);
+  renderTopicPanel(topic, state);
   renderCommandDock({ dashboardData, state, storageKey: STORAGE_KEY, buildModeMeta });
   renderSyncPanel(syncMeta);
   renderReview(dashboardData);

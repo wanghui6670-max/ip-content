@@ -1,15 +1,14 @@
+import { renderExecutionPanel } from "./execution.js";
 import { escapeHtml } from "./format.js";
 import {
   buildActivity,
   buildAngles,
   buildAssets,
   buildMetrics,
-  buildReceipts,
   buildSteps,
-  buildTasks,
 } from "./render.js";
 
-export function renderTopicPanel(topic) {
+export function renderTopicPanel(topic, state = {}) {
   if (!topic) return;
 
   document.getElementById("breadcrumb").textContent = `Pipeline > ${topic.id} > ${topic.account} > ${topic.platformText}`;
@@ -26,7 +25,6 @@ export function renderTopicPanel(topic) {
   document.getElementById("angleGrid").innerHTML = buildAngles(topic);
   document.getElementById("topicSummary").textContent = topic.summary || "";
   document.getElementById("assetGrid").innerHTML = buildAssets(topic);
-  document.getElementById("taskGrid").innerHTML = buildTasks(topic);
-  document.getElementById("receiptGrid").innerHTML = buildReceipts(topic);
+  renderExecutionPanel(topic, state);
   document.getElementById("feedList").innerHTML = buildActivity(topic);
 }

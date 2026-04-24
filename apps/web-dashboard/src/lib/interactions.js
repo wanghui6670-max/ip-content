@@ -34,6 +34,23 @@ export function bindTopicList({ state, renderAll }) {
     const button = event.target.closest("[data-topic-id]");
     if (!button) return;
     state.selectedId = button.dataset.topicId || state.selectedId;
+    state.taskStatusFilter = "all";
+    state.taskPlatformFilter = "all";
+    renderAll();
+  });
+}
+
+export function bindExecutionFilters({ state, renderAll }) {
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-execution-filter]");
+    if (!button) return;
+
+    const kind = button.dataset.executionFilter;
+    const value = button.dataset.executionValue || "all";
+
+    if (kind === "status") state.taskStatusFilter = value;
+    if (kind === "platform") state.taskPlatformFilter = value;
+
     renderAll();
   });
 }
@@ -104,6 +121,7 @@ export function bindAllInteractions({ dashboardData, state, storageKey, buildMod
   bindSearch({ state, renderAll });
   bindLineFilters({ state, renderAll });
   bindTopicList({ state, renderAll });
+  bindExecutionFilters({ state, renderAll });
   bindCommandDock({ dashboardData, state, storageKey, buildModeMeta });
   bindViewNavigation();
 }

@@ -22,7 +22,7 @@ Implementation notes:
 - added `test/views.test.js`
 - injected a view navigation panel above the existing dashboard content
 
-### P1.2 Data confidence and source panel — in review
+### P1.2 Data confidence and source panel — merged
 
 Goal: make data freshness and source mode visible.
 
@@ -40,16 +40,23 @@ Implementation notes:
 - updated `src/lib/panels.js`
 - expanded `test/panels.test.js`
 
-### P1.3 Task and publish views
+### P1.3 Task and publish views — in review
 
 Goal: make execution work easier to track.
 
 Tasks:
 
-- separate content tasks from publish receipts
-- surface owner, planned date, status, and platform
-- add simple filters for status and platform
-- keep table rendering small and dependency free
+- [x] separate content tasks from publish receipts
+- [x] surface owner, planned date, status, and platform
+- [x] add simple filters for status and platform
+- [x] keep table rendering small and dependency free
+
+Implementation notes:
+
+- added `src/lib/execution.js`
+- added `src/execution.css`
+- connected execution filters to dashboard state
+- added `test/execution.test.js`
 
 ### P1.4 Review and asset views
 
