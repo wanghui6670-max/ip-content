@@ -215,6 +215,7 @@ export function buildShell({ stageCount = 7 } = {}) {
                 <h3 id="reviewWeek">当前周</h3>
               </div>
             </div>
+            <div class="review-insight-grid" id="reviewInsightGrid"></div>
             <div class="review-block">
               <strong>复盘结论</strong>
               <p id="reviewSummary"></p>
