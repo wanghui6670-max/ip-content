@@ -2,6 +2,16 @@
 
 This backlog starts after PR #2, the P0/P1 baseline PR.
 
+Project definition:
+
+- `docs/product-definition.md`
+
+The product direction is now centered on IP building, not only output tracking. Future work should preserve the full chain:
+
+```text
+IP profile -> blogger collection -> input assets -> knowledge base -> topics -> tasks -> receipts -> review
+```
+
 ## P1 dashboard productization
 
 ### P1.1 Overview and view structure — merged
@@ -78,7 +88,7 @@ Implementation notes:
 
 ## P2 sync package
 
-### P2.1 feishu-sync skeleton — in review
+### P2.1 feishu-sync skeleton — merged
 
 Goal: move sync-related logic toward `packages/feishu-sync`.
 
@@ -107,6 +117,56 @@ Tasks:
 - validate required CSV headers
 - report missing tables clearly
 - add validation output for build logs
+
+### P2.3 input chain table contracts
+
+Goal: make the upstream IP input chain explicit in mirror validation.
+
+Tasks:
+
+- define contracts for blogger collection, input assets, knowledge base, and topic source relation tables
+- allow unknown CSV files to be ignored with warnings
+- report missing upstream tables separately from execution tables
+- keep sensitive links and tokens out of public output
+
+## P2.5 IP input and knowledge modeling
+
+### P2.5.1 Feishu table model for IP inputs
+
+Goal: align the Feishu schema with the IP building workflow before building more UI.
+
+Tasks:
+
+- define `IP档案`
+- define `博主账号`
+- define `博主内容采集`
+- define `输入资产`
+- define `知识库`
+- define `母题洞察`
+- define source relationships from `选题池` back to input assets and knowledge cards
+
+### P2.5.2 content-domain IP entities
+
+Goal: let shared domain code represent upstream IP assets.
+
+Tasks:
+
+- add IP profile entity normalizer
+- add input asset entity normalizer
+- add knowledge card entity normalizer
+- add topic source relation helpers
+- add maturity/status helpers for knowledge cards
+
+### P2.5.3 dashboard input chain view
+
+Goal: make upstream sources visible before content execution.
+
+Tasks:
+
+- show recent blogger collection signals
+- show input assets grouped by type
+- show knowledge cards grouped by maturity
+- show which topics are backed by which input assets or knowledge cards
 
 ## P3 CLI foundation
 

@@ -1,6 +1,8 @@
 # ip-content
 
-`ip-content` 是当前正在开发中的 **内部内容中台仓库**。
+`ip-content` 是当前正在开发中的 **IP 打造内容中台仓库**。
+
+它不是普通内容看板，也不是单纯的飞书同步工具。仓库的核心目标是把 IP 打造过程中从输入资产、知识库、选题、内容执行到复盘增长的链路沉淀成一个可持续维护的内部操作系统。
 
 它承载三类核心能力：
 
@@ -9,6 +11,10 @@
 3. **后续模块**：`packages/content-domain`、`packages/feishu-sync`、`tools/ip-cli`
 
 这个仓库已经从原评审包中独立出来，后续开发都应在这个新仓库中继续完成，不再回到 `light-meal`。
+
+项目级产品定义见：
+
+- `docs/product-definition.md`
 
 ## 当前状态
 
@@ -25,8 +31,8 @@
 
 当前仍在推进：
 
-- [ ] P1 dashboard 产品化
-- [ ] `packages/feishu-sync` 正式实现
+- [ ] IP 输入链路建模：博主数据采集 -> 输入资产 -> 知识库 -> 选题池
+- [ ] `packages/feishu-sync` 正式实现与镜像校验
 - [ ] `tools/ip-cli` 正式实现
 - [ ] 部署访问与发布治理收口
 
@@ -121,10 +127,29 @@ ip-content/
 
 尚未完全落地的部分：
 
+- IP 档案、输入资产、知识库、选题来源关系
 - 飞书在线同步 Worker / Sync 模块
 - 领域模型与状态规则进一步抽象
 - `ip` CLI 的真实实现
-- P1 dashboard 产品化视图
+
+## IP 打造主线
+
+后续开发应优先围绕这条闭环推进：
+
+```text
+IP 定位
+  -> 博主数据采集
+  -> 输入资产
+  -> 知识库
+  -> 洞察 / 方法论
+  -> 选题池
+  -> 内容任务
+  -> 发布回执
+  -> 周复盘
+  -> 反哺知识库和 IP 定位
+```
+
+其中知识库是关键中间层：它负责把外部信号和现场经验沉淀成自己的观点、方法论、案例、问题和证据，再支撑后续选题生成。
 
 ## 数据模式说明
 
@@ -161,6 +186,7 @@ ip-content/
 更多约束见：
 
 - `SECURITY.md`
+- `docs/product-definition.md`
 - `docs/开发路线图.md`
 - `docs/迁移清单.md`
 
@@ -172,7 +198,7 @@ ip-content/
 
 下一阶段会优先推进：
 
-1. P1 dashboard 产品化
-2. P2 `feishu-sync`
-3. P3 `ip-cli`
+1. 输入链路表模型：博主数据采集、输入资产、知识库、选题池
+2. P2 `feishu-sync` mirror validation
+3. P3 `content-domain` 领域实体扩展与 `ip-cli`
 4. P4 访问与发布治理
